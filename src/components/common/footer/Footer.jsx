@@ -17,26 +17,28 @@ const Footer = () => {
             </svg>
             <span> +91 60521488</span>
           </div>
-          <div className="box">
-            <h3>SPORT</h3>
-            <div className="item">
-              <img src="https://picsum.photos/200" alt="" />
-              <p>Google To Boost Android Security In Few Days</p>
+          <div className="category-box">
+            <div className="box">
+              <h3>SPORT</h3>
+              <div className="item">
+                <img src="https://picsum.photos/200" alt="" />
+                <p>Google To Boost Android Security In Few Days</p>
+              </div>
+              <div className="item">
+                <img src="https://picsum.photos/200" alt="" />
+                <p>Cespedes play the winning Baseball Game</p>
+              </div>
             </div>
-            <div className="item">
-              <img src="https://picsum.photos/200" alt="" />
-              <p>Cespedes play the winning Baseball Game</p>
-            </div>
-          </div>
-          <div className="box">
-            <h3>CRICKET</h3>
-            <div className="item">
-              <img src="https://picsum.photos/200" alt="" />
-              <p>US Promises to give Intel aid to locate the soldiers</p>
-            </div>
-            <div className="item">
-              <img src="https://picsum.photos/200" alt="" />
-              <p>Renewable energy dead as industry waits for Policy</p>
+            <div className="box">
+              <h3>CRICKET</h3>
+              <div className="item">
+                <img src="https://picsum.photos/200" alt="" />
+                <p>US Promises to give Intel aid to locate the soldiers</p>
+              </div>
+              <div className="item">
+                <img src="https://picsum.photos/200" alt="" />
+                <p>Renewable energy dead as industry waits for Policy</p>
+              </div>
             </div>
           </div>
           <div className="box">

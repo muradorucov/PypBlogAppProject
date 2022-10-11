@@ -47,7 +47,7 @@ const Popular = () => {
                       </div>
                     </div>
                     <div className="text row">
-                      <h1 className="title">{val.title.slice(0, 40)}...</h1>
+                      <h1 className="title">{val.title}</h1>
                       <div className="date">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
