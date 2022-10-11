@@ -34,15 +34,15 @@ const Popular = () => {
         <Heading title="Popular" />
         <div className="content">
           <Slider {...settings}>
-            {popular.map((val) => {
+            {popular.map((val,index) => {
               return (
-                <div className="items">
+                <div key={index} className="items">
                   <div className="box shadow">
                     <div className="images row">
                       <div className="img">
                         <img src={val.cover} alt="" />
                       </div>
-                      <div class="category category1">
+                      <div className="category category1">
                         <span>{val.catgeory}</span>
                       </div>
                     </div>

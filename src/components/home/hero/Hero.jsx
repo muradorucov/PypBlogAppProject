@@ -12,9 +12,9 @@ const Hero = () => {
         <div className='container'>
           {items.map((item) => {
             return (
-              <>
-                <Card key={item.id} item={item} />
-              </>
+              <React.Fragment  key={item.id}>
+                <Card item={item} />
+              </React.Fragment>
             )
           })}
         </div>

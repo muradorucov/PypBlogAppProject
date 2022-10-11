@@ -10,9 +10,9 @@ const Discover = () => {
         <div className='container'>
           <Heading title='Discover' />
           <div className='content'>
-            {discover.map((val) => {
+            {discover.map((val,index) => {
               return (
-                <div className='box'>
+                <div key={index} className='box'>
                   <div className='img'>
                     <img src={val.cover} alt='' />
                   </div>

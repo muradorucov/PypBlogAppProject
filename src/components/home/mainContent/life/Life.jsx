@@ -28,22 +28,22 @@ const Life = () => {
         <Heading title='Life Style' />
         <div className='content'>
           <Slider {...settings}>
-            {lifestyle.map((val) => {
+            {lifestyle.map((val,index) => {
               return (
-                <div className='items'>
+                <div key={index} className='items'>
                   <div className='box shadow'>
                     <div className='images'>
                       <div className='img'>
                         <img src={val.cover} alt='' />
                       </div>
-                      <div class='category category1'>
+                      <div className='category category1'>
                         <span>{val.catgeory}</span>
                       </div>
                     </div>
                     <div className='text'>
                       <h1 className='title'>{val.title.slice(0, 40)}...</h1>
                       <div className='date'>
-                        <i class='fas fa-calendar-days'></i>
+                        <i className='fas fa-calendar-days'></i>
                         <label>{val.date}</label>
                       </div>
                     </div>

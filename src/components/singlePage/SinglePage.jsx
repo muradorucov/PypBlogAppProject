@@ -53,45 +53,45 @@ const SinglePage = () => {
               </div>
 
               <div className='desctop'>
-                {item.desc.map((val) => {
+                {item.desc.map((val,index) => {
                   return (
-                    <>
+                    <div key={index}>
                       <p>{val.para1}</p>
                       <p>{val.para2}</p>
-                    </>
+                    </div>
                   )
                 })}
               </div>
               <img src={item.cover} alt='' />
-              {item.desc.map((val) => (
-                <p>{val.para3}</p>
+              {item.desc.map((val,index) => (
+                <p key={index}>{val.para3}</p>
               ))}
 
               <div className='descbot'>
-                {item.details.map((data) => {
+                {item.details.map((data,index) => {
                   return (
-                    <>
+                    <div key={index}>
                       <h1>{data.title}</h1>
                       <p>{data.para1}</p>
-                    </>
+                    </div>
                   )
                 })}
               </div>
 
               <div className='quote'>
                 <i className='fa fa-quote-left'></i>
-                {item.details.map((data) => (
-                  <p>{data.quote}</p>
+                {item.details.map((data,index) => (
+                  <p key={index}>{data.quote}</p>
                 ))}
               </div>
 
               <div className='desctop'>
-                {item.details.map((data) => {
+                {item.details.map((data,index) => {
                   return (
-                    <>
+                    <div key={index}>
                       <p>{data.para2}</p>
                       <p>{data.para3}</p>
-                    </>
+                    </div>
                   )
                 })}
               </div>
