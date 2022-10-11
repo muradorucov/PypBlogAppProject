@@ -17,9 +17,6 @@ function Navbar() {
               <Link to={"./news"}>News</Link>
             </li>
             <li>
-              <Link to={"./login"}>Login</Link>
-            </li>
-            <li>
               <Link to={"./login"}>Sport</Link>
             </li>
             <li>
@@ -42,7 +39,7 @@ function Navbar() {
             </li>
         </ul>
         <div className='nav_box'>
-          <h3 className='nav_box__log'>Log in</h3>
+          <Link to="/login" className='nav_box__log'>Log in</Link>
           <h1 className='nav_box__icon' onClick={()=>{setnavbarStatus(!navbarStatus)}}>{!navbarStatus? <>☰</> : <>⛌</>}</h1>
         </div>
       </div>
@@ -52,9 +49,6 @@ function Navbar() {
             </li>
             <li>
               <Link to={"./news"}>News</Link>
-            </li>
-            <li>
-              <Link to={"./login"}>Login</Link>
             </li>
             <li>
               <Link to={"./login"}>Sport</Link>
