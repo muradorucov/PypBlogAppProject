@@ -40,7 +40,7 @@ export const ROUTES = [
       children: [
         {
           name: "Dashboard",
-          path: "admin",
+          path: "dashboard",
           element: <div>Dashboard</div>,
         },
         {
