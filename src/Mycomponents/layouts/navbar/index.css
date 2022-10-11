@@ -3,17 +3,20 @@ nav{
     color: white;
     background-color: black;
     height: 72px;
-    padding: 0 20px;
+    padding: 0 ;
 }
-.container{
+nav .container{
     margin: 0 auto;
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     height: 100%;
 }
 .Navbrand{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0;
 }
 nav ul{
     height: 100%;
@@ -105,6 +108,16 @@ nav .mobile_navbar--close{
         overflow: hidden;
         flex-direction: column;
         align-items: start;
+        animation-name: mobilNavbarclose;
+        animation-duration: 300ms;
+    }
+    @keyframes mobilNavbarclose {
+        0% {height: 600px;
+        }
+        30% {height: 800px;
+        }
+        100%{height:0;
+        }
     }
     nav .mobile_navbar--open li{
         margin-bottom: 8px;

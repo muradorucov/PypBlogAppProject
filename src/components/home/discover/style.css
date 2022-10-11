@@ -1,8 +1,13 @@
+
+
+.discover .container{
+  all: unset;
+}
+
 .discover .content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 30px;
-  border: 1px solid red;
 }
 
 .discover .box {
