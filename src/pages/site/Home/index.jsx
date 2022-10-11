@@ -1,18 +1,17 @@
-import React, { useContext, useEffect } from "react";
-import {ProviderContext} from "../../../context/ContextProvider";
-import { categoryNetwork } from "../../../services/network/requests/categoryNetwork";
+import Footer from "../../../components/common/footer/Footer";
+import Discover from "../../../components/home/discover/Discover";
+import Hero from "../../../components/home/hero/Hero";
+import Homes from "../../../components/home/mainContent/homes/Home";
 
 function Home() {
-  useEffect(() => {
-    categoryNetwork.getAllCategories()
-  }, [])
-  
-  const {counter} = useContext(ProviderContext)
-  console.log();
-  
-  return<>
-   <div>Home {counter}</div>
-  </>;
+  return (
+    <div>
+      <Hero />
+      <Homes />
+      <Discover />
+      <Footer/>
+    </div>
+  );
 }
 
 export default Home;
