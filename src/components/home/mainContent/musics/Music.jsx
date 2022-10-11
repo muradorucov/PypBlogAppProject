@@ -23,15 +23,15 @@ const Music = () => {
           <Slider {...settings}>
             {popular
               .filter((val) => val.catgeory === "fun")
-              .map((val) => {
+              .map((val,index) => {
                 return (
-                  <div className="items">
+                  <div key={index} className="items">
                     <div className="box shadow flexSB">
                       <div className="images">
                         <div className="img">
                           <img src={val.cover} alt="" />
                         </div>
-                        <div class="category category1">
+                        <div className="category category1">
                           <span>{val.catgeory}</span>
                         </div>
                       </div>
