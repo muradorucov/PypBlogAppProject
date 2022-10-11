@@ -1,13 +1,17 @@
-import React, { useContext } from "react";
-import {ProviderContext} from "../../../context/ContextProvider";
+import Footer from "../../../components/common/footer/Footer";
+import Discover from "../../../components/home/discover/Discover";
+import Hero from "../../../components/home/hero/Hero";
+import Homes from "../../../components/home/mainContent/homes/Home";
 
 function Home() {
-  
-  const {counter} = useContext(ProviderContext)
-  
-  return<>
-   <div>Home {counter}</div>
-  </>;
+  return (
+    <div>
+      <Hero />
+      <Homes />
+      <Discover />
+      <Footer/>
+    </div>
+  );
 }
 
 export default Home;
