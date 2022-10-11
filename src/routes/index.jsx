@@ -13,7 +13,7 @@ export const ROUTES = [
         children: [
           {
             name: "Home",
-            path: "home",
+            path: "/",
             element: <Home/>,
           },
           {
