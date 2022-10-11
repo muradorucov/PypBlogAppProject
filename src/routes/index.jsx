@@ -4,6 +4,7 @@ import News from "../pages/site/News";
 import Login from "../pages/site/Login";
 import Register from "../pages/site/Register";
 import AdminRoot from "../pages/admin/AdminRoot";
+import Detail from "../pages/site/Detail";
 
 export const ROUTES = [
   {
@@ -15,6 +16,11 @@ export const ROUTES = [
     name: "News",
     path: "news",
     element: <News />,
+  },
+  {
+    name: "Detail",
+    path: "detail",
+    element: <Detail />,
   },
   {
     name: "Login",
