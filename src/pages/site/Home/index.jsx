@@ -1,7 +1,17 @@
-import React from "react";
+import Footer from "../../../components/common/footer/Footer";
+import Discover from "../../../components/home/discover/Discover";
+import Hero from "../../../components/home/hero/Hero";
+import Homes from "../../../components/home/mainContent/homes/Home";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Hero />
+      <Homes />
+      <Discover />
+      <Footer/>
+    </div>
+  );
 }
 
 export default Home;
