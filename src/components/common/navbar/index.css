@@ -65,6 +65,7 @@ nav .mobile_navbar--close{
 }
 .nav_box__log{
     cursor: pointer;
+    color:#fff
 }
 .nav_box__icon{
     display: none;
