@@ -111,6 +111,16 @@ ul {
     }
 }
 
+@media screen and (max-width: 960px){
+    .section-padding {
+        padding: 3rem 0;
+    }
+    .col-margin {
+        margin-bottom: 25px;
+    }
+}
+
+
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
@@ -134,3 +144,5 @@ ul {
         max-width: 540px;
     }
 }
+
+

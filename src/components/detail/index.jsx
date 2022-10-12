@@ -1,6 +1,5 @@
 import React from "react";
 import Blogcontent from "./blogcontent/blogcontent";
-import Crumbs from "./crumbs/crumbs";
 import BlogFooter from "./blogfooter";
 
 import "./style.css";
@@ -8,7 +7,6 @@ import "./style.css";
 
 function Detail() {
     return <div>
-        <Crumbs />
         <section id="main-contact" className="section-padding">
             <div className="container">
                 <div className="row-item">

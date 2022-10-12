@@ -112,3 +112,12 @@
 .page-social-links li a:hover {
     border-color: #63636b;
 }
+
+
+
+
+@media (max-width: 576px) {
+    .news-post-img{
+        height: 430px;
+    }
+}
