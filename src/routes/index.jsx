@@ -4,35 +4,41 @@ import News from "../pages/site/News";
 import Login from "../pages/site/Login";
 import Register from "../pages/site/Register";
 import AdminRoot from "../pages/admin/AdminRoot";
+import DetailPage from "../pages/site/Detail";
 
 
 export const ROUTES = [
   {
-      name: "Root Element for web",
-      path: "/",
-      element: <Root />,
-      children: [
-        {
-          name: "Home",
-          path: "/",
-          element: <Home/>,
-        },
-        {
-          name: "News",
-          path: "news",
-          element: <News/>,
-        },
-        {
-          name: "Login",
-          path: "login",
-          element: <Login />,
-        },
-        {
-          name: "Register",
-          path: "register",
-          element: <Register/>,
-        },
-      ],
+    name: "Root Element for web",
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        name: "Home",
+        path: "/",
+        element: <Home />,
+      },
+      {
+        name: "News",
+        path: "news",
+        element: <News />,
+      },
+      {
+        name: "Detail",
+        path: "detail",
+        element: <DetailPage />,
+      },
+      {
+        name: "Login",
+        path: "login",
+        element: <Login />,
+      },
+      {
+        name: "Register",
+        path: "register",
+        element: <Register />,
+      },
+    ],
   },
   {
     name: "Admin Root",
@@ -47,7 +53,7 @@ export const ROUTES = [
       {
         name: "News",
         path: "news",
-        element: <News/>,
+        element: <News />,
       },
     ],
   },
