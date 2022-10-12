@@ -1,24 +1,24 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function BlogComments() {
     return <div className="blog-Comment">
-        <div className="row">
+        <div className="row-item">
             <div className="col-12">
-                <h4 style={{ marginBottom: "2rem" }}>Comments</h4>
+                <h4 style={{ marginBottom: "2rem",fontSize: "1.5rem" }}>Comments</h4>
             </div>
         </div>
-        <div className="row">
+        <div className="row-item">
             <div className="col-12">
                 <div className="blog-comment-item">
                     <div className="comment-item">
                         <div className="comment-item-person">
-                            <div className="row">
+                            <div className="row-item">
                                 <div className="col">
-                                    <div className="comment-item-author d-flex align-items-center">
+                                    <div className="comment-item-author items">
                                         <div className="comment-item-author-img">
-                                            <img src="./img/auth-img-1.jpg" alt="" />
+                                            <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/auth-img-1.jpg" alt="" />
                                         </div>
                                         <div className="comment-item-author-info">
                                             <h4>Catherine Williams</h4>
@@ -27,9 +27,9 @@ function BlogComments() {
                                     </div>
                                 </div>
                                 <div className="col-auto">
-                                    <a href="#!" className="comment-item-replay">
+                                    <Link to="#!" className="comment-item-replay">
                                         Reply
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -44,11 +44,11 @@ function BlogComments() {
                     <div className="comment-replay">
                         <div className="comment-item">
                             <div className="comment-item-person">
-                                <div className="row">
+                                <div className="row-item">
                                     <div className="col">
-                                        <div className="comment-item-author d-flex align-items-center">
+                                        <div className="comment-item-author items">
                                             <div className="comment-item-author-img">
-                                                <img src="./img/auth-img-2.jpg" alt="" />
+                                                <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/auth-img-2.jpg" alt="" />
                                             </div>
                                             <div className="comment-item-author-info">
                                                 <h4>Rupert Wood</h4>
@@ -57,9 +57,9 @@ function BlogComments() {
                                         </div>
                                     </div>
                                     <div className="col-auto">
-                                        <a href="#!" className="comment-item-replay">
+                                        <Link to="#!" className="comment-item-replay">
                                             Reply
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -72,11 +72,11 @@ function BlogComments() {
                         </div>
                         <div className="comment-item">
                             <div className="comment-item-person">
-                                <div className="row">
+                                <div className="row-item">
                                     <div className="col">
-                                        <div className="comment-item-author d-flex align-items-center">
+                                        <div className="comment-item-author items">
                                             <div className="comment-item-author-img">
-                                                <img src="./img/auth-img-1.jpg" alt="" />
+                                                <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/auth-img-1.jpg" alt="" />
                                             </div>
                                             <div className="comment-item-author-info">
                                                 <h4>Catherine Williams</h4>
@@ -85,9 +85,9 @@ function BlogComments() {
                                         </div>
                                     </div>
                                     <div className="col-auto">
-                                        <a href="#!" className="comment-item-replay">
+                                        <Link to="#!" className="comment-item-replay">
                                             Reply
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -100,22 +100,22 @@ function BlogComments() {
                 <div className="blog-comment-item">
                     <div className="comment-item">
                         <div className="comment-item-person">
-                            <div className="row">
+                            <div className="row-item">
                                 <div className="col">
-                                    <div className="comment-item-author d-flex align-items-center">
+                                    <div className="comment-item-author items">
                                         <div className="comment-item-author-img">
-                                            <img src="./img/auth-img-3.jpg" alt="" />
+                                            <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/auth-img-1.jpg" alt="" />
                                         </div>
                                         <div className="comment-item-author-info">
-                                            <h4>Samantha Brown</h4>
+                                            <h4>Samantha Brow-itemn</h4>
                                             <p>Jan 23, 2021</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-auto">
-                                    <a href="#!" className="comment-item-replay">
+                                    <Link to="#!" className="comment-item-replay">
                                         Reply
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+#main-contact {
+    font-family: "Istok Web", sans-serif;
+}
+
 a {
     color: #007bff;
     text-decoration: none;
     background-color: transparent;
+}
+
+.items {
+    display: flex;
+    align-items: center;
 }
 
 .section-padding {
@@ -48,11 +59,27 @@ ul {
     max-width: 33.333333%;
 }
 
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
 .col,
+.col-auto{
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .col-12,
 .col-4,
 .col-6,
-.col-auto,
 .col-md,
 .col-md-auto {
     position: relative;

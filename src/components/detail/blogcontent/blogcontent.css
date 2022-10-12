@@ -1,8 +1,4 @@
-.items{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .news-post-meta {
     display: flex;
     align-items: center;
