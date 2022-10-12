@@ -1,20 +1,37 @@
 import { useForm } from "react-hook-form";
+import { useRef } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "../../../schema/RegisterSchema.js";
 import { Link } from "react-router-dom";
-import "./style.css";
 import { Helmet } from "react-helmet";
+import ReCAPTCHA from "react-google-recaptcha";
+import "./style.css";
 
 const Login = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(registerSchema),
-  });
+  } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const secretKey = "6LfsAnYiAAAAAGnfctngZTjhfcCjDWbGazgK-YR9";
+
+  const captchaRef = useRef(null);
+
+  const onSubmit = (data, e) => {
+    e.preventDefault();
+    const token = captchaRef.current.getValue();
+    if (token) {
+      // send data here
+      console.log(data);
+    }
+    captchaRef.current.reset();
+  };
+
+  const onChange = (value) => {
+    console.log(value);
+    console.log("test")
+  };
 
   return (
     <>
@@ -66,7 +83,13 @@ const Login = () => {
                   Forgot password?
                 </a>
               </div>
-
+              <div style={{ margin: " 5px auto", width: "80%" }}>
+                <ReCAPTCHA
+                  sitekey={"6LfsAnYiAAAAAK4gpGCB19QOzQTvL0gjYGQKZxSI"}
+                  ref={captchaRef}
+                  onChange={onChange}
+                />
+              </div>
               <div className="field button-field">
                 <button>Login</button>
               </div>
