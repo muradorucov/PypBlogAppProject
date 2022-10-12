@@ -1,10 +1,10 @@
 import React from "react";
-import Crumbs from "../../../components/detail/crumbs/crumbs";
+import Detail from "../../../components/detail";
 
-function Detail() {
+function DetailPage() {
     return <div>
-        <Crumbs/>
+        <Detail />
     </div>
 }
 
-export default Detail;
+export default DetailPage;

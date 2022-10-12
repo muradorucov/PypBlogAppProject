@@ -1,0 +1,119 @@
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.news-post-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    color: #63636b;
+    margin-bottom: -1rem;
+    margin-left: -1.25rem;
+}
+
+.news-post-meta-item {
+    display: flex;
+    align-items: center;
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.news-post-meta-item-icon {
+    font-size: 1.375rem;
+    width: 1.375rem;
+    height: 1.375rem;
+    margin-right: 5px;
+    color: #2c7ae7;
+}
+
+.news-post-img {
+    margin-top: 1.25rem;
+    height: 500px;
+    border: 1px solid #d4d4e1;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.news-post-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+.news-post-footer {
+    background-color: #fff;
+    margin-top: 2rem;
+    padding-top: 0.625rem;
+    border-top: 1px solid #d4d4e1;
+}
+
+
+.news-post-cat {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    margin-bottom: -0.625rem;
+    margin-left: -1rem;
+    font-size: 1rem;
+}
+
+.news-post-cat li {
+    margin-bottom: 0.625rem;
+    margin-left: 1rem;
+}
+
+.news-post-cat li:hover {
+    text-decoration: underline;
+}
+
+
+.news-post-share-title {
+    margin-right: 1.25rem;
+    color: #63636b;
+    margin-bottom: 0;
+}
+
+
+
+.page-social-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.25s;
+}
+
+.page-social-links li {
+    margin-right: 0.625rem;
+    margin-bottom: 0;
+}
+
+.page-social-links li a {
+    display: flex;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 6px;
+    color: #37373a;
+    border: 1px solid #d4d4e1;
+    transition: all 0.25s;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-social-links li a>i {
+    display: block;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: auto;
+}
+
+.page-social-links li a:hover {
+    border-color: #63636b;
+}
