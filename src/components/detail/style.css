@@ -43,6 +43,24 @@ ul {
     max-width: 100%;
 }
 
+.col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.col,
+.col-12,
+.col-4,
+.col-6,
+.col-auto,
+.col-md,
+.col-md-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 
 
 

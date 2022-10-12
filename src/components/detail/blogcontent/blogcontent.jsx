@@ -84,7 +84,6 @@ function Blogcontent() {
                 </div>
             </footer>
         </div>
-
     </div>;
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Blogcontent from "./blogcontent/blogcontent";
 import Crumbs from "./crumbs/crumbs";
+import BlogFooter from "./blogfooter";
 
 import "./style.css";
 
@@ -13,6 +14,7 @@ function Detail() {
                 <div className="row-item">
                     <div className="col-12 item">
                         <Blogcontent />
+                        <BlogFooter />
                     </div>
                 </div>
             </div>
