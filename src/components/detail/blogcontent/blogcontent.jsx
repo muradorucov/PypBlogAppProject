@@ -17,8 +17,8 @@ function Blogcontent() {
             <div className="news-post-meta">
                 <div className="news-post-meta-item">
                     <AccessTimeIcon
-                    color="primary"
-                    fontSize="small" />
+                        color="primary"
+                        fontSize="small" />
                     <span>Jan 23, 2021</span>
                 </div>
                 <div className="news-post-meta-item">
@@ -27,8 +27,8 @@ function Blogcontent() {
                 </div>
                 <div className="news-post-meta-item">
                     <ChatBubbleIcon
-                    color="primary"
-                    fontSize="small"/>
+                        color="primary"
+                        fontSize="small" />
                     <span>18</span>
                 </div>
             </div>
@@ -37,7 +37,23 @@ function Blogcontent() {
             </div>
             <article className="news-post-article">
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                    qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
+                    id. Optio consequuntur est nisi veniam, quod animi.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                    qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
+                    id. Optio consequuntur est nisi veniam, quod animi.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                    qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
+                    id. Optio consequuntur est nisi veniam, quod animi.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                    qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
+                    id. Optio consequuntur est nisi veniam, quod animi.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                    qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
+                    id. Optio consequuntur est nisi veniam, quod animi.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                    qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
+                    id. Optio consequuntur est nisi veniam, quod animi.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                    qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
+                    id. Optio consequuntur est nisi veniam, quod animi.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
+                    qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
+                    id. Optio consequuntur est nisi veniam, quod animi.Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, nemo amet
                     qui sint dolorum sunt? Magni voluptas porro illum blanditiis vero, omnis
                     id. Optio consequuntur est nisi veniam, quod animi.
                 </p>
@@ -60,22 +76,22 @@ function Blogcontent() {
                             <ul className="page-social-links">
                                 <li>
                                     <Link to="#!" title="Facebook">
-                                        <FacebookIcon/>
+                                        <FacebookIcon />
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="#!" title="Instagram">
-                                        <InstagramIcon/>
+                                        <InstagramIcon />
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="#!" title="LinkedIn">
-                                        <LinkedInIcon/>
+                                        <LinkedInIcon />
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="#!" title="Twitter">
-                                        <TwitterIcon/>
+                                        <TwitterIcon />
                                     </Link>
                                 </li>
                             </ul>
