@@ -27,9 +27,9 @@ const SinglePageSlider = () => {
       <section className='singlePopular'>
         <div className='content'>
           <Slider {...settings}>
-            {popular.map((val) => {
+            {popular.map((val,index) => {
               return (
-                <div className='items'>
+                <div  key={index} className='items'>
                   <div className='box'>
                     <div className='images'>
                       <img src={val.cover} alt='' />
