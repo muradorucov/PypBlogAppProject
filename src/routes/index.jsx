@@ -9,7 +9,7 @@ import Dashboard from "../pages/admin/Dashboard";
 import ProductList from "../pages/admin/productList";
 import OrderList from "../pages/admin/orderList/OrderList";
 import AddProduct from "../pages/admin/addProduct";
-import addOrder from "../pages/admin/orderList/addOrder/AddOrder";
+import AddOrder from "../pages/admin/orderList/addOrder/AddOrder";
 
 export const ROUTES = [
   {
