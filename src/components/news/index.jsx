@@ -1,11 +1,11 @@
 import React from "react";
-import "./music.css";
+import "./style.css";
 import Slider from "react-slick";
-import Heading from "../../../common/heading/Heading";
-import { popular } from "../../../../dummyData";
+import Heading from "../common/heading/Heading";
+import { popular } from "../../dummyData";
 import { Link } from "react-router-dom";
 
-const Music = () => {
+const NewsBox = () => {
   const settings = {
     className: "center",
     centerMode: true,
@@ -13,17 +13,16 @@ const Music = () => {
     centerPadding: "0",
     slidesToShow: 1,
     speed: 500,
-    rows: 2,
+    rows: 9,
     slidesPerRow: 1,
   };
   return (
     <>
-      <section className="music">
-        <Heading title="Music News" />
+      <section className="mews">
+        <Heading title="News" />
         <div className="content">
           <Slider {...settings}>
             {popular
-              .filter((val) => val.catgeory === "fun")
               .map((val, index) => {
                 return (
                   <div key={index} className="items">
@@ -37,11 +36,13 @@ const Music = () => {
                             <span>{val.catgeory}</span>
                           </div>
                         </Link>
+
                       </div>
                       <div className="text">
                         <Link to={`/detail/${val.id}`}>
-                          <h1 className='title'>{val.title.slice(0, 40)}...</h1>
+                          <h1 className="title">{val.title.slice(0, 40)}...</h1>
                         </Link>
+
                         <div className="date">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -73,4 +74,4 @@ const Music = () => {
   );
 };
 
-export default Music;
+export default NewsBox;

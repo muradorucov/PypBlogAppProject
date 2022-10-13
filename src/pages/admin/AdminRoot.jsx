@@ -83,18 +83,19 @@ const items = [
     getItem(<Link to="/admin">Analytics</Link>, "1"),
     getItem("Commerce", "2"),
   ]),
-  getItem("Products", "sub2", <DesktopOutlined />, [
-    getItem(<Link to="/admin/products">Product Table</Link>, "3"),
-    getItem(<Link to="/admin/add-product">Add Product</Link>, "4"),
+  getItem("Posts", "sub2", <DesktopOutlined />, [
+    getItem(<Link to="/admin/products">Post Table</Link>, "3"),
+    getItem(<Link to="/admin/add-product">Add Post</Link>, "4"),
   ]),
   // getItem('Suppliers', 'sub3', <UserOutlined/>, [
   // 	getItem('Tom', '6'),
   // 	getItem('Bill', '7'),
   // ]),
-  getItem("Orders", "sub3", <FileProtectOutlined />, [
-    getItem(<Link to="/admin/orders">Order Table</Link>, "8"),
-    getItem(<Link to="/admin/add-order">Add Order</Link>, "9"),
+  getItem("Users", "sub3", <FileProtectOutlined />, [
+    getItem(<Link to="/admin/orders">User Table</Link>, "8"),
+    getItem(<Link to="/admin/add-order">Add User</Link>, "9"),
   ]),
+
   getItem("Users", "10", <TeamOutlined />),
   getItem("Files", "11", <FileOutlined />),
 ];

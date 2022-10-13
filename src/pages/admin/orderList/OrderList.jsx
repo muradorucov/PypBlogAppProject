@@ -130,44 +130,27 @@ const OrderList = () => {
     },
 
     {
-      title: "shipName",
-      dataIndex: "shipName",
-      key: "shipName",
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
       width: "20%",
-      sorter: (a, b) => a.shipName.length - b.shipName.length,
-      ...getColumnSearchProps("shipName"),
+      sorter: (a, b) => a.name.length - b.name.length,
+      ...getColumnSearchProps("name"),
     },
+
     {
-      title: "orderDate",
-      dataIndex: "orderDate",
-      key: "orderDate",
+      title: "Surname",
+      dataIndex: "surname",
+      key: "surname",
       width: "20%",
-      render: (date) => moment(`${date}`).format("YYYY-MM-DD"),
-      sorter: (a, b) => moment(a.orderDate).unix() - moment(b.orderDate).unix(),
+      ...getColumnSearchProps("surname"),
     },
     {
-      title: "customerId",
-      dataIndex: "customerId",
-      key: "customerId",
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
       width: "20%",
-      ...getColumnSearchProps("customerId"),
-    },
-    {
-      title: "Street",
-      dataIndex: "shipAddress",
-      key: "shipAddress",
-      sorter: (a, b) =>
-        a.shipAddress.street.length - b.shipAddress.street.length,
-      sortDirections: ["descend", "ascend"],
-      render: (shipAddress, record) => <p>{shipAddress.street}</p>,
-    },
-    {
-      title: "City",
-      dataIndex: "shipAddress",
-      key: "shipAddress",
-      sorter: (a, b) => a.shipAddress.city.length - b.shipAddress.city.length,
-      sortDirections: ["descend", "ascend"],
-      render: (shipAddress, record) => <p>{shipAddress.city}</p>,
+      ...getColumnSearchProps("surname"),
     },
     {
       title: "Detail",
@@ -181,7 +164,7 @@ const OrderList = () => {
   return (
     <div style={{ width: "70%", margin: "auto", paddingBottom: "30px" }}>
       <div className="orders__header">
-        <h1 style={{ alignSelf: "center" }}>Orders</h1>
+        <h1 style={{ alignSelf: "center" }}>Users</h1>
       </div>
       <Table
         columns={columns}

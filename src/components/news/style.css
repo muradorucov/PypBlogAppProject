@@ -1,0 +1,41 @@
+.mews .box {
+  margin-bottom: 30px;
+  margin-left: 2px;
+}
+.mews .text {
+  padding: 0 30px;
+}
+
+.mews .date, .mews .comment{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.mews svg{
+  width: 20px;
+}
+
+.mews .desc{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 70px;
+}
+
+.mews img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.mews h1 {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .mews img,
+  .mews .images {
+    height: 350px;
+  }
+}

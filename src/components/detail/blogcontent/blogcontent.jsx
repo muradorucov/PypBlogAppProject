@@ -128,7 +128,7 @@ function Blogcontent() {
             </article>
             <footer className="news-post-footer">
                 <div className="row-item items">
-                    <div className="col-md col-6 col-margin">
+                    <div className="col-md col-respon-4 col-margin">
                         <ul className="news-post-cat">
                             <li>
                                 <Link to="#!">Startup</Link>
@@ -138,7 +138,7 @@ function Blogcontent() {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-md-auto col-6 col-margin">
+                    <div className="col-md-auto col-respon-4 col-margin">
                         <div className="news-post-share items">
                             <p className="news-post-share-title">Share</p>
                             <ul className="page-social-links">
