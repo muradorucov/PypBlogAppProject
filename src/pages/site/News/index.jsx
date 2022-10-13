@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../../../components/common/footer/Footer";
 import Navbar from "../../../components/common/navbar";
 import Side from "../../../components/home/sideContent/side/Side";
 import NewsBox from "../../../components/news";
+import Footer from "../../../components/common/footer/Footer";
 
 function News() {
   return <>
