@@ -1,9 +1,11 @@
+import {useRef} from "react"
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "../../../schema/RegisterSchema";
 import { Link } from "react-router-dom";
 import "../Login/style.css";
 import { Helmet } from "react-helmet";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Register = () => {
   const {
@@ -14,8 +16,22 @@ const Register = () => {
     resolver: yupResolver(registerSchema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const secretKey = "6LeZn3ciAAAAAM7JJb8xdKbiCYnc5phJIFXzanCm";
+  const captchaRef = useRef(null);
+
+  const onSubmit = (data, e) => {
+    e.preventDefault();
+    const token = captchaRef.current.getValue();
+    if (token) {
+      // send data here
+      console.log(data);
+    }
+    captchaRef.current.reset();
+  };
+
+  const onChange = (value) => {
+    console.log(value);
+    console.log("test");
   };
 
   return (
@@ -84,7 +100,9 @@ const Register = () => {
                   type="password"
                   placeholder="Confirm Password"
                   className={
-                    errors.confirmPassword ? "password error-border" : "password"
+                    errors.confirmPassword
+                      ? "password error-border"
+                      : "password"
                   }
                   {...register("confirmPassword")}
                   name="confirmPassword"
@@ -95,6 +113,14 @@ const Register = () => {
                 ) : (
                   <></>
                 )}
+              </div>
+
+              <div style={{ margin: " 5px auto", width: "80%" }}>
+                <ReCAPTCHA
+                  sitekey={"6LeZn3ciAAAAAPoRedk7nhKfb0Ig-GNfzOCsTPwc"}
+                  ref={captchaRef}
+                  onChange={onChange}
+                />
               </div>
 
               <div className="field button-field">

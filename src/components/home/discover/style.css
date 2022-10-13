@@ -1,8 +1,8 @@
 
 
-.discover .container{
-  all: unset;
-}
+/* .discover .container{ */
+  /* all: unset; */
+/* } */
 
 .discover .content {
   display: grid;
