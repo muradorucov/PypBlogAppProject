@@ -28,7 +28,7 @@ const Side = () => {
       </section>
       <section className="catgorys">
         <Heading title="Catgeorys" />
-        {catgeory.map((val,index) => {
+        {catgeory.map((val, index) => {
           return (
             <div key={index} className="category category1">
               <span>{val}</span>
