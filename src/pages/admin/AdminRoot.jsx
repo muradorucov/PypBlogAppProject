@@ -83,9 +83,9 @@ const items = [
     getItem(<Link to="/admin">Analytics</Link>, "1"),
     getItem("Commerce", "2"),
   ]),
-  getItem("Products", "sub2", <DesktopOutlined />, [
-    getItem(<Link to="/admin/products">Product Table</Link>, "3"),
-    getItem(<Link to="/admin/add-product">Add Product</Link>, "4"),
+  getItem("Posts", "sub2", <DesktopOutlined />, [
+    getItem(<Link to="/admin/products">Post Table</Link>, "3"),
+    getItem(<Link to="/admin/add-product">Add Post</Link>, "4"),
   ]),
   // getItem('Suppliers', 'sub3', <UserOutlined/>, [
   // 	getItem('Tom', '6'),
