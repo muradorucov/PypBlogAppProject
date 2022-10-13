@@ -1,18 +1,56 @@
 import "./side.css";
 import Heading from "../../../common/heading/Heading";
 import SocialMedia from "../social/SocialMedia";
+import { Link } from "react-router-dom";
 
 const Side = () => {
-  const catgeory = [
-    "world",
-    "travel",
-    "sport",
-    "fun",
-    "health",
-    "fashion",
-    "business",
-    "technology",
-  ];
+  const navLinks = [ 
+    {
+    id:1,
+    name:"Home",
+    route:""
+    },
+    {
+      id:2,
+      name:"News",
+      route:"News"
+    },
+    {
+      id:3,
+      name:"Sport",
+      route:"Sport"
+    },
+    {
+      id:4,
+      name:"Reel",
+      route:"Reel"
+    },
+    {
+      id:5,
+      name:"Worklife",
+      route:"Worklife"
+    },
+    {
+      id:6,
+      name:"Travel",
+      route:"Travel"
+    },
+    {
+      id:7,
+      name:"Future",
+      route:"Future"
+    },
+    {
+      id:8,
+      name:"Culture",
+      route:"Culture"
+    },
+    {
+      id:9,
+      name:"Tech",
+      route:"Tech"
+    },
+]
 
   return (
     <>
@@ -28,11 +66,15 @@ const Side = () => {
       </section>
       <section className="catgorys">
         <Heading title="Catgeorys" />
-        {catgeory.map((val, index) => {
+        {navLinks.map((item,index) => {
           return (
-            <div key={index} className="category category1">
-              <span>{val}</span>
+            <Link key={item.id} to={`/${item.route}`}>
+            <div  className="category category1">
+              <span>
+              {item.name}
+              </span>
             </div>
+            </Link>
           );
         })}
       </section>

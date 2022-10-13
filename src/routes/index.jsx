@@ -5,7 +5,11 @@ import Login from "../pages/site/Login";
 import Register from "../pages/site/Register";
 import AdminRoot from "../pages/admin/AdminRoot";
 import DetailPage from "../pages/site/Detail";
-
+import Dashboard from "../pages/admin/Dashboard";
+import ProductList from "../pages/admin/productList";
+import OrderList from "../pages/admin/orderList/OrderList";
+import AddProduct from "../pages/admin/addProduct";
+import AddOrder from "../pages/admin/orderList/addOrder/AddOrder";
 
 export const ROUTES = [
   {
@@ -41,19 +45,28 @@ export const ROUTES = [
     ],
   },
   {
-    name: "Admin Root",
     path: "/admin",
     element: <AdminRoot />,
     children: [
       {
-        name: "Dashboard",
-        path: "admin",
-        element: <div>Dashboard</div>,
+        path: "",
+        element: <Dashboard />,
       },
       {
-        name: "News",
-        path: "news",
-        element: <News />,
+        path: "products",
+        element: <ProductList />,
+      },
+      {
+        path: "orders",
+        element: <OrderList />,
+      },
+      {
+        path: "add-product",
+        element: <AddProduct />,
+      },
+      {
+        path: "add-order",
+        element: <AddOrder />,
       },
     ],
   },
