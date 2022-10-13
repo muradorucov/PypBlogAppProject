@@ -7,20 +7,10 @@ import { supplierNetwork } from "../../../../network/requests/supplierNetwork";
 import { categoryNetwork } from "../../../../network/requests/categoryNetwork";
 
 let schema = yup.object().shape({
-  shipName: yup.string().required(),
-  orderDate: yup.date().required(),
-  requiredDate: yup.date().required(),
-  shippedDate: yup.date().required(),
-  shipVia: yup.number().required(),
-  freight: yup.number().required(),
-  street: yup.string().required(),
-  city: yup.string().required(),
-  region: yup.string().required(),
-  postalCode: yup.number().required(),
-  country: yup.string().required(),
-  unitPrice: yup.number().required(),
-  quantity: yup.number().required(),
-  discount: yup.number().required(),
+  name: yup.string().required(),
+  surname: yup.string().required(),
+  email: yup.string().required(),
+  password: yup.number().required(),
 });
 
 const yupSync = {
@@ -89,102 +79,25 @@ const AddOrder = () => {
   };
   return (
     <div style={{ padding: "20px" }}>
-      <h1 style={{ textAlign: "center" }}>Add order</h1>
+      <h1 style={{ textAlign: "center" }}>Add User</h1>
       <Form form={form} name="form1" onFinish={onFinish} style={formStyle}>
-        <Row>
-          {/* 24x */}
-          <Col span={12}>
-            <Form.Item name="shipName" rules={[yupSync]} label="Ship Name">
-              <Input placeholder="Please input ship name" />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item label="Order Date" name="orderDate" rules={[yupSync]}>
-              <DatePicker
-                placeholder="orderDate"
-                name="orderDate"
-                style={{ width: "100%" }}
-              />
-            </Form.Item>
-          </Col>
-        </Row>
-
-        <p>Required date</p>
-
-        <Form.Item name="requiredDate" rules={[yupSync]}>
-          <DatePicker
-            placeholder="requiredDate"
-            name="requiredDate"
-            style={{ width: "100%" }}
-          />
+        <p>Name</p>
+        <Form.Item name="name" rules={[yupSync]}>
+          <Input placeholder="Name" />
         </Form.Item>
-        <p>Shipped date</p>
-
-        <Form.Item name="shippedDate" rules={[yupSync]}>
-          <DatePicker
-            placeholder="shippedDate"
-            name="shippedDate"
-            style={{ width: "100%" }}
-          />
+        <p>Surname</p>
+        <Form.Item name="surname" rules={[yupSync]}>
+          <Input placeholder="Surname" />
         </Form.Item>
-        <p>ShipVia</p>
-
-        <Form.Item name="shipVia" rules={[yupSync]}>
-          <Input placeholder="Please input ship Via" />
+        <p>Email</p>
+        <Form.Item name="email" rules={[yupSync]}>
+          <Input placeholder="Email" />
         </Form.Item>
-        <p>Freight</p>
-        <Form.Item name="freight" rules={[yupSync]}>
-          <Input placeholder="Please input ship freight" />
-        </Form.Item>
-        <p>Street</p>
-        <Form.Item name="street" rules={[yupSync]}>
-          <Input placeholder="Please input ship street" />
-        </Form.Item>
-        <p>City</p>
-        <Form.Item name="city" rules={[yupSync]}>
-          <Input placeholder="Please input ship city" />
-        </Form.Item>
-        <p>Region</p>
-        <Form.Item name="region" rules={[yupSync]}>
-          <Input placeholder="Please input ship region" />
-        </Form.Item>
-        <p>Postal code</p>
-        <Form.Item name="postalCode" rules={[yupSync]}>
-          <Input placeholder="Please input postal code" />
-        </Form.Item>
-        <p>Country</p>
-        <Form.Item name="country" rules={[yupSync]}>
-          <Input placeholder="Please input country" />
-        </Form.Item>
-        <p>Unit price</p>
-        <Form.Item name="unitPrice" rules={[yupSync]}>
-          <Input placeholder="Please input unit price" />
-        </Form.Item>
-        <p>Quantity</p>
-        <Form.Item name="quantity" rules={[yupSync]}>
-          <Input placeholder="Please input quantity" />
-        </Form.Item>
-        <p>Discount</p>
-        <Form.Item name="discount" rules={[yupSync]}>
-          <Input placeholder="Please input discount" />
+        <p>Password</p>
+        <Form.Item name="password" rules={[yupSync]}>
+          <Input placeholder="Password" />
         </Form.Item>
 
-        <Form.Item
-          name="categoryId"
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Select defaultValue="Select Supplier" style={{ width: "100%" }}>
-            {suppliers?.map((supplier) => (
-              <Option key={supplier.id} value={supplier.id}>
-                {supplier.companyName}
-              </Option>
-            ))}
-          </Select>
-        </Form.Item>
         <Form.Item
           name="supplierId"
           rules={[
@@ -192,15 +105,7 @@ const AddOrder = () => {
               required: true,
             },
           ]}
-        >
-          <Select defaultValue="Select Category" style={{ width: "100%" }}>
-            {categories?.map((category) => (
-              <Option key={category.id} value={category.id}>
-                {category.name}
-              </Option>
-            ))}
-          </Select>
-        </Form.Item>
+        ></Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit" style={btnStyle}>
             Add
