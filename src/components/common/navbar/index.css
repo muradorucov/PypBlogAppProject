@@ -1,4 +1,4 @@
-nav{
+nav {
    
     color: white;
     background-color: black;
@@ -12,6 +12,7 @@ nav .container{
     height: 100%;
 }
 .Navbrand{
+    color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -65,11 +66,13 @@ nav .mobile_navbar--close{
 }
 .nav_box__log{
     cursor: pointer;
-    color:#fff
+    color:#fff;
 }
 .nav_box__icon{
     display: none;
+    color: white;
     cursor: pointer;
+    margin: 0;
 }
 @media screen and (max-width:1170px) {
     .nav_box__icon{
