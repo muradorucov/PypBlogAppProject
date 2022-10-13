@@ -9,9 +9,9 @@ import "./index.css";
 const router = createBrowserRouter(ROUTES);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <ContextProvider>
-        <HelmetProvider>
-            <RouterProvider router={router} />
-        </HelmetProvider>
-    </ContextProvider>
+  <ContextProvider>
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  </ContextProvider>
 );
