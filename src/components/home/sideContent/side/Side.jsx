@@ -8,7 +8,7 @@ const Side = () => {
     {
     id:1,
     name:"Home",
-    route:"/"
+    route:""
     },
     {
       id:2,
@@ -68,8 +68,8 @@ const Side = () => {
         <Heading title="Catgeorys" />
         {navLinks.map((item,index) => {
           return (
-            <Link to={`./${item.route}`}>
-            <div key={item.id} className="category category1">
+            <Link key={item.id} to={`/${item.route}`}>
+            <div  className="category category1">
               <span>
               {item.name}
               </span>
