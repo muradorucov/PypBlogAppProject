@@ -91,10 +91,11 @@ const items = [
   // 	getItem('Tom', '6'),
   // 	getItem('Bill', '7'),
   // ]),
-  getItem("Orders", "sub3", <FileProtectOutlined />, [
-    getItem(<Link to="/admin/orders">Order Table</Link>, "8"),
-    getItem(<Link to="/admin/add-order">Add Order</Link>, "9"),
+  getItem("Users", "sub3", <FileProtectOutlined />, [
+    getItem(<Link to="/admin/orders">User Table</Link>, "8"),
+    getItem(<Link to="/admin/add-order">Add User</Link>, "9"),
   ]),
+
   getItem("Users", "10", <TeamOutlined />),
   getItem("Files", "11", <FileOutlined />),
 ];
