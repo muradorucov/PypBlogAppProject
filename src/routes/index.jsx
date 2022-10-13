@@ -10,6 +10,13 @@ import ProductList from "../pages/admin/productList";
 import OrderList from "../pages/admin/orderList/OrderList";
 import AddProduct from "../pages/admin/addProduct";
 import AddOrder from "../pages/admin/orderList/addOrder/AddOrder";
+import Sport from "../pages/site/Sport";
+import Worklife from "../pages/site/Worklife";
+import Travel from "../pages/site/Travel/Index";
+import Culture from "../pages/site/Culture";
+import Future from "../pages/site/Future";
+import Tech from "../pages/site/Teach";
+import Reel from "../pages/site/Reel";
 
 export const ROUTES = [
   {
@@ -26,6 +33,41 @@ export const ROUTES = [
         name: "News",
         path: "news",
         element: <News />,
+      },
+      {
+        name: "Sport",
+        path: "Sport",
+        element: <Sport />,
+      },
+      {
+        name: "Reel",
+        path: "Reel",
+        element: <Reel />,
+      },
+      {
+        name: "Worklife",
+        path: "Worklife",
+        element: <Worklife />,
+      },
+      {
+        name: "Travel",
+        path: "Travel",
+        element: <Travel />,
+      },
+      {
+        name: "Future",
+        path: "Future",
+        element: <Future />,
+      },
+      {
+        name: "Culture",
+        path: "Culture",
+        element: <Culture />,
+      },
+      {
+        name: "Tech",
+        path: "Tech",
+        element: <Tech />,
       },
       {
         name: "Detail",
