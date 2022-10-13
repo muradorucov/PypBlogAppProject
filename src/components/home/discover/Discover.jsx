@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { discover } from "../../../dummyData"
 import Heading from "../../common/heading/Heading"
 import "./style.css"
@@ -10,13 +11,15 @@ const Discover = () => {
         <div className='container'>
           <Heading title='Discover' />
           <div className='content'>
-            {discover.map((val,index) => {
+            {discover.map((val, index) => {
               return (
                 <div key={index} className='box'>
                   <div className='img'>
                     <img src={val.cover} alt='' />
                   </div>
-                  <h1 className='title'>{val.title}</h1>
+                  <Link to={`${val.title}`}>
+                    <h1 className='title'>{val.title}</h1>
+                  </Link>
                 </div>
               )
             })}

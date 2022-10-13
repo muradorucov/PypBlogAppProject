@@ -29,7 +29,7 @@ export const ROUTES = [
       },
       {
         name: "Detail",
-        path: "detail",
+        path: "detail/:id",
         element: <DetailPage />,
       },
       {

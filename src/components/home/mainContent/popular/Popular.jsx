@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { popular } from "../../../../dummyData";
 import Heading from "../../../common/heading/Heading";
+import { Link } from "react-router-dom";
 
 const Popular = () => {
   const settings = {
@@ -34,7 +35,7 @@ const Popular = () => {
         <Heading title="Popular" />
         <div className="content">
           <Slider {...settings}>
-            {popular.map((val,index) => {
+            {popular.map((val, index) => {
               return (
                 <div key={index} className="items">
                   <div className="box shadow">
@@ -42,12 +43,16 @@ const Popular = () => {
                       <div className="img">
                         <img src={val.cover} alt="" />
                       </div>
-                      <div className="category category1">
-                        <span>{val.catgeory}</span>
-                      </div>
+                      <Link to={`/${val.catgeory}`}>
+                        <div className="category category1">
+                          <span>{val.catgeory}</span>
+                        </div>
+                      </Link>
                     </div>
                     <div className="text row">
-                      <h1 className="title">{val.title}</h1>
+                      <Link to={`/detail/${val.id}`}>
+                        <h1 className="title">{val.title}</h1>
+                      </Link>
                       <div className="date">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
