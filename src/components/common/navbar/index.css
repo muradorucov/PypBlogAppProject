@@ -12,6 +12,7 @@ nav .container{
     height: 100%;
 }
 .Navbrand{
+    margin: 0;
     color: white;
     cursor: pointer;
     display: flex;
