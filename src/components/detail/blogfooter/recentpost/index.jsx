@@ -9,8 +9,8 @@ function BlogRecentPost() {
                 <h4 style={{ marginBottom: "2rem", fontSize: "1.5rem" }}>Recent Posts</h4>
             </div>
         </div>
-        <div className="row-item">
-            <div className="col-4">
+        <div className="row-item respon-d-flex">
+            <div className="col-4 col-respon-4">
                 <div className="news-item">
                     <Link to="#!" className="news-img">
                         <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/news-img-3.jpg" alt="" />
@@ -32,7 +32,7 @@ function BlogRecentPost() {
                     </div>
                 </div>
             </div>
-            <div className="col-4">
+            <div className="col-4 col-respon-4">
                 <div className="news-item">
                     <Link to="#!" className="news-img">
                         <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/news-img-3.jpg" alt="" />
@@ -54,7 +54,7 @@ function BlogRecentPost() {
                     </div>
                 </div>
             </div>
-            <div className="col-4">
+            <div className="col-4 col-respon-4">
                 <div className="news-item">
                     <Link to="#!" className="news-img">
                         <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/news-img-3.jpg" alt="" />

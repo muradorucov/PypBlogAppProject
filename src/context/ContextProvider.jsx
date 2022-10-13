@@ -1,24 +1,24 @@
 import { createContext, useState } from "react";
 
-export const ProviderContext = createContext(null);
+export const providerContext = createContext(null);
 
 function ContextProvider({ children }) {
-  const [counter, setcounter] = useState(0);
+  const [product, setProduct] = useState();
   const [suppliers, setSuppliers] = useState([]);
   const [categories, setCategories] = useState([]);
 
   const values = {
-    counter,
-    setcounter,
+    product,
+    setProduct,
     suppliers,
     setSuppliers,
     categories,
     setCategories,
   };
   return (
-    <ProviderContext.Provider value={values}>
+    <providerContext.Provider value={values}>
       {children}
-    </ProviderContext.Provider>
+    </providerContext.Provider>
   );
 }
 

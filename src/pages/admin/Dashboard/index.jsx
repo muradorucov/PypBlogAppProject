@@ -1,7 +1,7 @@
 import React from "react";
 
-function index() {
-  return <div>Dashboard</div>;
-}
+const Dashboard = () => {
+  return <>Dashboard</>;
+};
 
-export default index;
+export default Dashboard;
