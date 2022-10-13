@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import * as yup from "yup";
 import "antd/dist/antd.css";
 import { Form, Input, Button, DatePicker, Select, Row, Col } from "antd";
-import { orderNetwork } from "network/requests/orderNetwork";
-import { supplierNetwork } from "network/requests/supplierNetwork";
-import { categoryNetwork } from "network/requests/categoryNetwork";
+import { orderNetwork } from "../../../../network/requests/orderNetwork";
+import { supplierNetwork } from "../../../../network/requests/supplierNetwork";
+import { categoryNetwork } from "../../../../network/requests/categoryNetwork";
 
 let schema = yup.object().shape({
   shipName: yup.string().required(),
