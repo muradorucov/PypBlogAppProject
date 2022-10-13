@@ -76,8 +76,10 @@ a {
   transition: all 0.5s ease-out;
   cursor: pointer;
 }
-.category1 span {
+.category1 a{
   color: #fff;
+}
+.category1 span {
   text-transform: capitalize;
   letter-spacing: 0;
 }
