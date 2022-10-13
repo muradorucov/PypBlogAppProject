@@ -1,38 +1,52 @@
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { registerSchema } from "../../../schema/RegisterSchema.js";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import ReCAPTCHA from "react-google-recaptcha";
 import "./style.css";
+import * as yup from "yup";
+
+const validationSchema = yup.object().shape({
+  email: yup
+    .string("email should be a string")
+    .email("please provide a valid email address")
+    .required("email address is required"),
+  password: yup
+    .string("password should be a string")
+    .min(5, "password should have a minimum length of 5")
+    .max(12, "password should have a maximum length of 12")
+    .required("password is required"),
+});
 
 const Login = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+    defaultValues: { email: "", password: "" },
+  });
 
   const secretKey = "6LfsAnYiAAAAAGnfctngZTjhfcCjDWbGazgK-YR9";
 
   const captchaRef = useRef(null);
 
   const onSubmit = (data, e) => {
-    e.preventDefault();
     const token = captchaRef.current.getValue();
     if (token) {
       // send data here
       console.log(data);
+      captchaRef.current.reset();
     }
-    captchaRef.current.reset();
   };
 
   const onChange = (value) => {
     console.log(value);
-    console.log("test")
+    console.log("test");
   };
-
+  console.log(errors);
   return (
     <>
       <Helmet>
@@ -43,7 +57,7 @@ const Login = () => {
         <div className="form login">
           <div className="form-content">
             <header>Login</header>
-            <form method="POST" onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="field input-field">
                 <input
                   placeholder="Email"

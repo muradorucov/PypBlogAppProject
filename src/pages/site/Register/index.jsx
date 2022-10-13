@@ -1,4 +1,4 @@
-import {useRef} from "react"
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "../../../schema/RegisterSchema";
@@ -6,6 +6,26 @@ import { Link } from "react-router-dom";
 import "../Login/style.css";
 import { Helmet } from "react-helmet";
 import ReCAPTCHA from "react-google-recaptcha";
+import * as yup from "yup";
+
+const validationSchema = yup.object().shape({
+  fullName: yup
+    .string("Full name should be a string")
+    .required("Name address is required"),
+  email: yup
+    .string("email should be a string")
+    .email("please provide a valid email address")
+    .required("email address is required"),
+  password: yup
+    .string("password should be a string")
+    .min(5, "password should have a minimum length of 5")
+    .max(12, "password should have a maximum length of 12")
+    .required("password is required"),
+  confirmPassword: yup
+    .string("password should be a string")
+    .oneOf([yup.ref("password")])
+    .required("confirm password is required"),
+});
 
 const Register = () => {
   const {
@@ -13,7 +33,13 @@ const Register = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(registerSchema),
+    resolver: yupResolver(validationSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
   });
 
   const secretKey = "6LeZn3ciAAAAAM7JJb8xdKbiCYnc5phJIFXzanCm";
