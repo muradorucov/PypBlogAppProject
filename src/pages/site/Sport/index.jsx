@@ -15,7 +15,7 @@ function Sport() {
                 <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
             <Navbar />
-            <BlogCard name='Sport News'/>
+            <BlogCard name='Sport'/>
             <Footer />
         </>
     )

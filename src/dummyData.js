@@ -188,7 +188,7 @@ export const world = [
 export const popular = [
     {
         id: 1,
-        catgeory: "world",
+        catgeory: "Culture",
         title: "Our Favorite Photos From All Around",
         date: "19. February 2022",
         comments: 0,
@@ -197,7 +197,7 @@ export const popular = [
     },
     {
         id: 2,
-        catgeory: "travel",
+        catgeory: "Culture",
         title: "Places To Visit For A Peaceful Holiday",
         date: "19. February 2022",
         comments: 0,
@@ -206,7 +206,7 @@ export const popular = [
     },
     {
         id: 3,
-        catgeory: "sport",
+        catgeory: "Sport",
         title: "Is This The New Boxing Champion?",
         date: "19. February 2022",
         comments: 0,
@@ -215,7 +215,7 @@ export const popular = [
     },
     {
         id: 4,
-        catgeory: "sport",
+        catgeory: "Sport",
         title: "A Detailed Retelling Of Our Trek Through The Dangerous Alps",
         date: "19. February 2022",
         comments: 0,
@@ -224,7 +224,7 @@ export const popular = [
     },
     {
         id: 5,
-        catgeory: "fun",
+        catgeory: "Reel",
         title: "Natural Sunlight Boosts Your Immunity",
         date: "19. February 2022",
         comments: 0,
@@ -233,7 +233,7 @@ export const popular = [
     },
     {
         id: 6,
-        catgeory: "health",
+        catgeory: "Worklife",
         title: "Health Benefits From Asparagus",
         date: "19. February 2022",
         comments: 0,
@@ -242,7 +242,7 @@ export const popular = [
     },
     {
         id: 7,
-        catgeory: "fashion",
+        catgeory: "Travel",
         title: "The Valid Fashion Style For This Fall",
         date: "19. February 2022",
         comments: 0,
@@ -251,8 +251,35 @@ export const popular = [
     },
     {
         id: 8,
-        catgeory: "fun",
+        catgeory: "Future",
         title: "Vote For The Top Tracks Of The Month",
+        date: "19. February 2022",
+        comments: 0,
+        cover: "https://picsum.photos/200",
+        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.",
+    },
+    {
+        id: 9,
+        catgeory: "Tech",
+        title: "Vote For The Top Tracks Of The Month",
+        date: "19. February 2022",
+        comments: 0,
+        cover: "https://picsum.photos/200",
+        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.",
+    },
+    {
+        id: 10,
+        catgeory: "Tech",
+        title: "Metnlerrr For The Top Tracks Of The Month",
+        date: "19. February 2022",
+        comments: 0,
+        cover: "https://picsum.photos/200",
+        desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.",
+    },
+    {
+        id:11,
+        catgeory: "Tech",
+        title: "Textler For The Top Tracks Of The Month",
         date: "19. February 2022",
         comments: 0,
         cover: "https://picsum.photos/200",

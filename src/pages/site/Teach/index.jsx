@@ -12,7 +12,7 @@ function Tech() {
                 <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
             <Navbar />
-            <BlogCard name='Tech News'/>
+            <BlogCard name='Tech'/>
             <Footer />
         </>
     )
