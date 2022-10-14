@@ -3,10 +3,19 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "../../../schema/RegisterSchema";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "../Login/style.css";
 import { Helmet } from "react-helmet";
 import ReCAPTCHA from "react-google-recaptcha";
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
+import PersonIcon from '@mui/icons-material/Person';
 import * as yup from "yup";
+import "./style.css"
+
 
 const validationSchema = yup.object().shape({
   fullName: yup
@@ -66,116 +75,136 @@ const Register = () => {
         <title>Log In Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <section className="form-container forms">
-        <div className="form login">
-          <div className="form-content">
-            <header>Sign Up</header>
-            <form method="POST" onSubmit={handleSubmit(onSubmit)}>
-              <div className="field input-field">
-                <input
-                  placeholder="Full Name"
-                  className={errors.fullName ? "input error-border" : "input"}
-                  {...register("fullName")}
-                  type="text"
-                  name="fullName"
-                  id="fullName"
-                />
-                {errors.fullName ? (
-                  <div className="error">{errors.fullName.message}</div>
-                ) : (
-                  <></>
-                )}
-              </div>
+      <div className="register-container">
+        <div className="forms-container">
+          <form action="/" className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
+            <h2 className="login-title">SIGIN UP</h2>
 
-              <div className="field input-field">
-                <input
-                  placeholder="Email"
-                  className={errors.email ? "input error-border" : "input"}
-                  {...register("email")}
-                  type="text"
-                  name="email"
-                  id="email"
-                />
-                {errors.email ? (
-                  <div className="error">{errors.email.message}</div>
-                ) : (
-                  <></>
-                )}
-              </div>
-
-              <div className="field input-field">
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className={
-                    errors.password ? "password error-border" : "password"
-                  }
-                  {...register("password")}
-                  name="password"
-                  id="password"
-                />
-                {errors.password ? (
-                  <div className="error">{errors.password.message}</div>
-                ) : (
-                  <></>
-                )}
-              </div>
-
-              <div className="field input-field">
-                <input
-                  type="password"
-                  placeholder="Confirm Password"
-                  className={
-                    errors.confirmPassword
-                      ? "password error-border"
-                      : "password"
-                  }
-                  {...register("confirmPassword")}
-                  name="confirmPassword"
-                  id="confirmPassword"
-                />
-                {errors.confirmPassword ? (
-                  <div className="error">{errors.confirmPassword.message}</div>
-                ) : (
-                  <></>
-                )}
-              </div>
-
-              <div style={{ margin: " 5px auto", width: "80%" }}>
-                <ReCAPTCHA
-                  sitekey={"6LeZn3ciAAAAAPoRedk7nhKfb0Ig-GNfzOCsTPwc"}
-                  ref={captchaRef}
-                  onChange={onChange}
-                />
-              </div>
-
-              <div className="field button-field">
-                <button>Sign Up</button>
-              </div>
-            </form>
-
-            <div className="form-link">
-              <span>
-                Already have an account?{" "}
-                <Link className="link signup-link" to="/login">
-                  Login
-                </Link>
-              </span>
+            {/*====== Sign UP Input Start =======*/}
+            <div className="login-input-field">
+              <i>
+                <PersonIcon />
+              </i>
+              <input
+                placeholder="Full Name"
+                className={errors.fullName ? "input error-border" : "input"}
+                {...register("fullName")}
+                type="text"
+                name="fullName"
+                id="fullName"
+              />
+              {errors.fullName ? (
+                <div className="login-text-danger error">{errors.fullName.message}</div>
+              ) : (
+                <></>
+              )}
             </div>
-          </div>
-
-          <div className="line"></div>
-
-          <div className="media-options">
-            <a href="#" className="field google">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
-                <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
-              </svg>
-              <span>SignUp with Google</span>
-            </a>
+            <div className="login-input-field">
+              <i><EmailIcon /></i>
+              <input
+                placeholder="Email"
+                className={errors.email ? "input error-border" : "input"}
+                {...register("email")}
+                type="text"
+                name="email"
+                id="email"
+              />
+              {errors.email ? (
+                <div className=" login-text-danger error">{errors.email.message}</div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div className="login-input-field">
+            <i><LockIcon /></i>
+              <input
+                type="password"
+                placeholder="Password"
+                className={
+                  errors.password ? "password error-border" : "password"
+                }
+                {...register("password")}
+                name="password"
+                id="password"
+              />
+              {errors.password ? (
+                <div className="login-text-danger error">{errors.password.message}</div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div className="login-input-field">
+              <i><LockIcon /></i>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                className={
+                  errors.confirmPassword
+                    ? "password error-border"
+                    : "password"
+                }
+                {...register("confirmPassword")}
+                name="confirmPassword"
+                id="confirmPassword"
+              />
+              {errors.confirmPassword ? (
+                <div className="login-text-danger error">{errors.confirmPassword.message}</div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <input type="submit" value="SIGIN UP" className="solid" />
+            {/*====== Sign In Input end =======*/}
+            <div style={{ cursor: "pointer" }}>
+              <ReCAPTCHA
+                sitekey={"6LfsAnYiAAAAAK4gpGCB19QOzQTvL0gjYGQKZxSI"}
+                ref={captchaRef}
+                onChange={onChange}
+              />
+            </div>
+            {/*====== Sign in with social platforms Start =======*/}
+            <p className="login-social-text">
+              Or Sign in with social platforms
+            </p>
+            <div className="login-social-media">
+              <Link to="#!" className="login-social-icon">
+                <FacebookIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <LinkedInIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <GoogleIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <TwitterIcon />
+              </Link>
+            </div>
+            {/*====== Sign in with social platforms end =======*/}
+          </form>
+        </div>
+        <div className="panels-container">
+          {/* Sing Up Content */}
+          <div className="panel right-panel">
+            <div className="content">
+              <h3 style={{ color: "#fff" }}>One of us ?</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laboriosam ad deleniti.
+              </p>
+              <Link to="/login">
+                <button className="btn-item transparent" id="sign-in-btn">
+                  SIGN IN
+                </button>
+              </Link>
+            </div>
+            <img
+              src="https://raw.githubusercontent.com/sefyudem/Sliding-Sign-In-Sign-Up-Form/955c6482aeeb2f0e77c1f3c66354da3bc4d7a72d/img/register.svg"
+              className="image"
+              alt="Logo"
+            />
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
