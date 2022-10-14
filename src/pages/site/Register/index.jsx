@@ -78,7 +78,7 @@ const Register = () => {
       <div className="register-container">
         <div className="forms-container">
           <form action="/" className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
-            <h2 className="login-title">SIGIN UP</h2>
+            <h2 className="login-title">SIGN UP</h2>
 
             {/*====== Sign UP Input Start =======*/}
             <div className="login-input-field">
@@ -153,7 +153,7 @@ const Register = () => {
                 <></>
               )}
             </div>
-            <input type="submit" value="SIGIN UP" className="solid" />
+            <input type="submit" value="SIGN UP" className="solid" />
             {/*====== Sign In Input end =======*/}
             <div style={{ cursor: "pointer" }}>
               <ReCAPTCHA
