@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "../../../schema/RegisterSchema";
 import { Link } from "react-router-dom";
-import "../Login/style.css";
+import "./style.css";
 import { Helmet } from "react-helmet";
 import ReCAPTCHA from "react-google-recaptcha";
 import * as yup from "yup";
