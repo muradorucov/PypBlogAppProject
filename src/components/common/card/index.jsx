@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { MyBlogs } from "../../../dummyData.js";
 import Side from "../../home/sideContent/side/Side.jsx";
 import Heading from "../heading/Heading.jsx";
+import "./index.css"
 function BlogCard({ name = "Category" }) {
   const settings = {
     className: "center",
@@ -34,18 +35,14 @@ function BlogCard({ name = "Category" }) {
                               <div className="img">
                                 <img src={val.cover} alt="" />
                               </div>
-                              <Link to={`/${val.catgeory}`}>
                                 <div className="category category1">
                                   <span>{val.catgeory}</span>
                                 </div>
-                              </Link>
                             </div>
                             <div className="text">
-                              <Link to={`/detail/${val.id}`}>
                                 <h1 className="title">
                                   {val.title.slice(0, 40)}...
                                 </h1>
-                              </Link>
                               <div className="date">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
