@@ -11,7 +11,7 @@ import Culture from "../pages/site/Culture";
 import Future from "../pages/site/Future";
 import Tech from "../pages/site/Teach";
 import Reel from "../pages/site/Reel";
-import ForgotPassword from "../pages/site/ForgotPassword";
+import ForgotPassword from "../pages/site/PasswordForgot";
 import AdminRoot from "../pages/admin/AdminRoot";
 import Dashboard from "../pages/admin/Dashboard";
 import PostList from "../pages/admin/posts/PostList.jsx";
@@ -21,6 +21,7 @@ import UpdateCategory from "../pages/admin/categories/UpdateCategory.jsx";
 import CategoryList from "../pages/admin/categories/CategoryList.jsx";
 import UpdatePost from "../pages/admin/posts/UpdatePost.jsx";
 import Users from "../pages/admin/users/Users.jsx";
+import ResetPassword from "../pages/site/PasswordReset";
 
 export const ROUTES = [
   {
@@ -89,9 +90,14 @@ export const ROUTES = [
         element: <Register/>,
       },
       {
+        name: "ForgotPassword",
+        path: "forget",
+        element: <ForgotPassword/>,
+      },
+      {
         name: "ResetPassword",
         path: "reset",
-        element: <ForgotPassword/>,
+        element: <ResetPassword/>,
       },
     ],
   },
