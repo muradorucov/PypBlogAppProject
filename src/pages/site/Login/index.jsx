@@ -109,7 +109,7 @@ const Login = () => {
               <Link to="#!" className="reset">
                 Forget Password?
               </Link>
-              <div style={{ margin: " 5px auto", cursor: "pointer" }}>
+              <div style={{ cursor: "pointer" }}>
                 <ReCAPTCHA
                   sitekey={"6LfsAnYiAAAAAK4gpGCB19QOzQTvL0gjYGQKZxSI"}
                   ref={captchaRef}

@@ -75,7 +75,7 @@ form.sign-in-form {
     grid-template-columns: 15% 85%;
     padding: 0 0.4rem;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .register-input {
@@ -221,7 +221,7 @@ form.sign-in-form {
     align-items: flex-end;
     justify-content: space-around;
     text-align: center;
-    z-index: 5;
+    z-index: 6;
 }
 
 .left-panel {
@@ -262,7 +262,6 @@ form.sign-in-form {
 @media (max-width: 870px) {
     .container-sign-in {
         min-height: 760px;
-        /* height: 100vh; */
     }
 
     .signin-signup {
@@ -325,7 +324,7 @@ form.sign-in-form {
         height: 1500px;
         transform: translateX(-50%);
         left: 30%;
-        bottom: 68%;
+        bottom: 70%;
         right: initial;
         top: initial;
         transition: 2s ease-in-out;
