@@ -12,7 +12,7 @@ function Culture() {
                 <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
             <Navbar />
-            <BlogCard name='Culture News'/>
+            <BlogCard name='Culture'/>
             <Footer />
         </>
   )

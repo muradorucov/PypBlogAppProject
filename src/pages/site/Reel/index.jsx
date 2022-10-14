@@ -12,7 +12,7 @@ function Reel() {
                 <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
             <Navbar />
-            <BlogCard name='Reel News'/>
+            <BlogCard name='Reel'/>
             <Footer />
         </>
   )

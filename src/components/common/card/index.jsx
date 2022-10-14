@@ -1,10 +1,10 @@
-import { Link } from '@chakra-ui/react';
+import {Link} from 'react-router-dom'
 import React from 'react'
 import Slider from 'react-slick';
-import {popular} from '../../../dummyData.js'
+import { MyBlogs } from '../../../dummyData.js'
 import Side from '../../home/sideContent/side/Side.jsx';
 import Heading from '../heading/Heading.jsx';
-function BlogCard({name="Category"}) {
+function BlogCard({ name = "Category" }) {
   const settings = {
     className: "center",
     centerMode: true,
@@ -16,18 +16,18 @@ function BlogCard({name="Category"}) {
     slidesPerRow: 1,
   };
   return (
-    
+
     <div className='container'>
       <section className="music  ">
-      {/* mainContent */}
+        {/* mainContent */}
         <Heading title={name} />
         <div className="content">
           <Slider {...settings}>
-            {popular
-              .filter((val) => val.catgeory === "fun")
+            {MyBlogs
+              .filter((val) => val.catgeory === name)
               .map((val, index) => {
                 return (
-                  <div key={index} className="items">
+                  <div className="items">
                     <div className="box shadow flexSB">
                       <div className="images">
                         <div className="img">
