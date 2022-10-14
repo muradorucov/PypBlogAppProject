@@ -1,11 +1,10 @@
-import { orderNetwork } from "../../../network/requests/orderNetwork";
+import {orderNetwork} from "../../../network/requests/orderNetwork";
 import "./OrderList.css";
-import React, { useEffect, useRef, useState } from "react";
-import { SearchOutlined } from "@ant-design/icons";
-import { Button, Input, Space, Table } from "antd";
+import React, {useEffect, useRef, useState} from "react";
+import {SearchOutlined} from "@ant-design/icons";
+import {Button, Input, Space, Table} from "antd";
 import DetailsModal from "./modal/DetailsModal";
 import Highlighter from "react-highlight-words";
-import moment from "moment";
 
 const OrderList = () => {
   const [orders, setOrders] = useState([]);
@@ -31,11 +30,11 @@ const OrderList = () => {
   };
   const getColumnSearchProps = (dataIndex) => ({
     filterDropdown: ({
-      setSelectedKeys,
-      selectedKeys,
-      confirm,
-      clearFilters,
-    }) => (
+                       setSelectedKeys,
+                       selectedKeys,
+                       confirm,
+                       clearFilters,
+                     }) => (
       <div
         style={{
           padding: 8,
@@ -58,7 +57,7 @@ const OrderList = () => {
           <Button
             type="primary"
             onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
-            icon={<SearchOutlined />}
+            icon={<SearchOutlined/>}
             size="small"
             style={{
               width: 90,
@@ -154,7 +153,7 @@ const OrderList = () => {
     },
     {
       title: "Detail",
-      render: () => <DetailsModal rowData={record} />,
+      render: () => <DetailsModal rowData={record}/>,
     },
   ];
   useEffect(() => {
@@ -162,9 +161,9 @@ const OrderList = () => {
   }, []);
 
   return (
-    <div style={{ width: "70%", margin: "auto", paddingBottom: "30px" }}>
+    <div style={{width: "70%", margin: "auto", paddingBottom: "30px"}}>
       <div className="orders__header">
-        <h1 style={{ alignSelf: "center" }}>Users</h1>
+        <h1 style={{alignSelf: "center"}}>Users</h1>
       </div>
       <Table
         columns={columns}
