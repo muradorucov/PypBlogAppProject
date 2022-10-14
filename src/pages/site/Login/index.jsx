@@ -106,8 +106,8 @@ const Login = () => {
               </div>
               <input type="submit" value="LOGIN" className="solid" />
               {/*====== Sign In Input end =======*/}
-              <Link to="#!" className="reset">
-                Forget Password?
+              <Link to="/reset" className="reset">
+                Forgot Password?
               </Link>
               <div style={{ cursor: "pointer" }}>
                 <ReCAPTCHA

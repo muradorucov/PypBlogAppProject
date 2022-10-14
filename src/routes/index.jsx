@@ -17,6 +17,7 @@ import Culture from "../pages/site/Culture";
 import Future from "../pages/site/Future";
 import Tech from "../pages/site/Teach";
 import Reel from "../pages/site/Reel";
+import ForgotPassword from "../pages/site/ForgotPassword";
 
 export const ROUTES = [
   {
@@ -83,6 +84,11 @@ export const ROUTES = [
         name: "Register",
         path: "register",
         element: <Register />,
+      },
+      {
+        name: "ResetPassword",
+        path: "reset",
+        element: <ForgotPassword />,
       },
     ],
   },
