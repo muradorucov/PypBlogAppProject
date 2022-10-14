@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import { providerContext } from "../../../context/ContextProvider";
+import {providerContext} from "../../../context/ContextProvider.jsx";
 
 import {
   Button,
@@ -12,13 +12,14 @@ import {
   Table,
   Space,
 } from "antd";
-import React, { useEffect, useState, useContext } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import React, {useEffect, useState, useContext} from "react";
+import toast, {Toaster} from "react-hot-toast";
 
-import { productNetwork } from "../../../network/requests/productNetwork";
-import { supplierNetwork } from "../../../network/requests/supplierNetwork";
-import { categoryNetwork } from "../../../network/requests/categoryNetwork";
-const { Option } = Select;
+import {productNetwork} from "../../../network/requests/productNetwork.js";
+import {supplierNetwork} from "../../../network/requests/supplierNetwork.js";
+import {categoryNetwork} from "../../../network/requests/categoryNetwork.js";
+
+const {Option} = Select;
 
 const ProductList = () => {
   const {
@@ -213,14 +214,14 @@ const ProductList = () => {
                 validateMessages={validateMessages}
               >
                 <Form.Item
-                  style={{ width: 350 }}
+                  style={{width: 350}}
                   name="name"
                   label="Product name"
                 >
-                  <Input />
+                  <Input/>
                 </Form.Item>
                 <Form.Item name="supplierId" label="Supplier">
-                  <Select style={{ width: 200 }}>
+                  <Select style={{width: 200}}>
                     {suppliers?.map((supplier) => (
                       <Option key={supplier.id} value={supplier.id}>
                         {supplier.companyName}
@@ -229,7 +230,7 @@ const ProductList = () => {
                   </Select>
                 </Form.Item>
                 <Form.Item name="categoryId" label="Category">
-                  <Select style={{ width: 200 }}>
+                  <Select style={{width: 200}}>
                     {categories?.map((category) => (
                       <Option key={category.id} value={category.id}>
                         {category.name}
@@ -238,32 +239,32 @@ const ProductList = () => {
                   </Select>
                 </Form.Item>
                 <Form.Item
-                  style={{ width: 400 }}
+                  style={{width: 400}}
                   name="unitsInStock"
                   label="Units in Stock"
                 >
-                  <InputNumber type="number" />
+                  <InputNumber type="number"/>
                 </Form.Item>
                 <Form.Item
-                  style={{ width: 350 }}
+                  style={{width: 350}}
                   name="quantityPerUnit"
                   label="Quantity Per Unit"
                 >
-                  <Input placeholder="48 - 6 oz jars" />
+                  <Input placeholder="48 - 6 oz jars"/>
                 </Form.Item>
                 <Form.Item
-                  style={{ width: 400 }}
+                  style={{width: 400}}
                   name="reorderLevel"
                   label="Reorder Level"
                 >
-                  <InputNumber type="number" />
+                  <InputNumber type="number"/>
                 </Form.Item>
                 <Form.Item
-                  style={{ width: 400 }}
+                  style={{width: 400}}
                   name="unitPrice"
                   label="Unit Price"
                 >
-                  <InputNumber type="number" />
+                  <InputNumber type="number"/>
                 </Form.Item>
                 <Form.Item name="discontinued" label="Discontinued">
                   <Checkbox checked={updatedValue.discontinued}></Checkbox>
@@ -324,7 +325,7 @@ const ProductList = () => {
         columns={columns}
         rowKey={(product) => product.id}
       />
-      <Toaster />
+      <Toaster/>
     </div>
   );
 };
