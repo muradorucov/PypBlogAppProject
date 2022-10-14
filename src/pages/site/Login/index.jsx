@@ -106,7 +106,7 @@ const Login = () => {
               </div>
               <input type="submit" value="LOGIN" className="solid" />
               {/*====== Sign In Input end =======*/}
-              <Link to="/reset" className="reset">
+              <Link to="/forget" className="reset">
                 Forgot Password?
               </Link>
               <div style={{ cursor: "pointer" }}>

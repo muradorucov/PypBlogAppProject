@@ -38,6 +38,7 @@
   .mews img,
   .mews .images {
     height: 250px;
+    width: 100%;
   }
   .mews .box{
     display: block ;
