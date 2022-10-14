@@ -10,6 +10,9 @@ import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
+import PersonIcon from '@mui/icons-material/Person';
 import * as yup from "yup";
 import "./style.css"
 
@@ -74,45 +77,129 @@ const Register = () => {
       </Helmet>
       <div className="register-container">
         <div className="forms-container">
-          <form action="/login" method="POST" className="sign-up-form " onSubmit={handleSubmit(onSubmit)}>
+          <form action="/" className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
+            <h2 className="login-title">Sign in</h2>
+
+            {/*====== Sign In Input Start =======*/}
+            <div className="login-input-field">
+              <i>
+                <PersonIcon />
+              </i>
+              <input
+                placeholder="Full Name"
+                className={errors.fullName ? "input error-border" : "input"}
+                {...register("fullName")}
+                type="text"
+                name="fullName"
+                id="fullName"
+              />
+              {errors.fullName ? (
+                <div className="login-text-danger error">{errors.fullName.message}</div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div className="login-input-field">
+              <i><EmailIcon /></i>
+              <input
+                placeholder="Email"
+                className={errors.email ? "input error-border" : "input"}
+                {...register("email")}
+                type="text"
+                name="email"
+                id="email"
+              />
+              {errors.email ? (
+                <div className=" login-text-danger error">{errors.email.message}</div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div className="login-input-field">
+            <i><LockIcon /></i>
+              <input
+                type="password"
+                placeholder="Password"
+                className={
+                  errors.password ? "password error-border" : "password"
+                }
+                {...register("password")}
+                name="password"
+                id="password"
+              />
+              {errors.password ? (
+                <div className="login-text-danger error">{errors.password.message}</div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div className="login-input-field">
+              <i><LockIcon /></i>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                className={
+                  errors.confirmPassword
+                    ? "password error-border"
+                    : "password"
+                }
+                {...register("confirmPassword")}
+                name="confirmPassword"
+                id="confirmPassword"
+              />
+              {errors.confirmPassword ? (
+                <div className="login-text-danger error">{errors.confirmPassword.message}</div>
+              ) : (
+                <></>
+              )}
+            </div>
+            <input type="submit" value="LOGIN" className="solid" />
+            {/*====== Sign In Input end =======*/}
+            <Link to="#!" className="reset">
+              Forget Password?
+            </Link>
+            <div style={{ cursor: "pointer" }}>
+              <ReCAPTCHA
+                sitekey={"6LfsAnYiAAAAAK4gpGCB19QOzQTvL0gjYGQKZxSI"}
+                ref={captchaRef}
+                onChange={onChange}
+              />
+            </div>
+            {/*====== Sign in with social platforms Start =======*/}
+            <p className="login-social-text">
+              Or Sign in with social platforms
+            </p>
+            <div className="login-social-media">
+              <Link to="#!" className="login-social-icon">
+                <FacebookIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <LinkedInIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <GoogleIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <TwitterIcon />
+              </Link>
+            </div>
+            {/*====== Sign in with social platforms end =======*/}
+          </form>
+          {/* <form action="/login" className="sign-up-form " onSubmit={handleSubmit(onSubmit)}>
             <h2 className="register-title">Qeydiyyat</h2>
             <div className="register-input">
               <label htmlFor="fullName">
                 <i className="fas fa-user" aria-hidden="true" />
                 <span className="label-register">Full name</span>
                 <div className="input-field margin-input">
-                  <input
-                    placeholder="Full Name"
-                    className={errors.fullName ? "input error-border" : "input"}
-                    {...register("fullName")}
-                    type="text"
-                    name="fullName"
-                    id="fullName"
-                  />
-                  {errors.fullName ? (
-                    <div className="error">{errors.fullName.message}</div>
-                  ) : (
-                    <></>
-                  )}
+                  
                 </div>
               </label>
               <label htmlFor="email">
                 <i className="fas fa-user" aria-hidden="true" />
                 <span className="label-register">Soyad</span>
                 <div className="input-field ">
-                  <input
-                    placeholder="Email"
-                    className={errors.email ? "input error-border" : "input"}
-                    {...register("email")}
-                    type="text"
-                    name="email"
-                    id="email"
-                  />
-                  {errors.email ? (
-                    <div className="error">{errors.email.message}</div>
-                  ) : (
-                    <></>
-                  )}
+                  
                 </div>
               </label>
             </div>
@@ -121,44 +208,14 @@ const Register = () => {
                 <i className="fas fa-phone" />
                 <span className="label-register">Telefon Nömrəsi</span>
                 <div className="input-field margin-input">
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    className={
-                      errors.password ? "password error-border" : "password"
-                    }
-                    {...register("password")}
-                    name="password"
-                    id="password"
-                  />
-                  {errors.password ? (
-                    <div className="error">{errors.password.message}</div>
-                  ) : (
-                    <></>
-                  )}
+                  
                 </div>
               </label>
               <label htmlFor="confirmPassword">
                 <i className="fas fa-envelope" />
                 <span className="label-register">Email</span>
                 <div className="input-field">
-                  <input
-                    type="password"
-                    placeholder="Confirm Password"
-                    className={
-                      errors.confirmPassword
-                        ? "password error-border"
-                        : "password"
-                    }
-                    {...register("confirmPassword")}
-                    name="confirmPassword"
-                    id="confirmPassword"
-                  />
-                  {errors.confirmPassword ? (
-                    <div className="error">{errors.confirmPassword.message}</div>
-                  ) : (
-                    <></>
-                  )}
+                  
                 </div>
               </label>
             </div>
@@ -173,39 +230,39 @@ const Register = () => {
               <input type="submit" className="btn-item" value="Qeydiyyat" />
             </div>
             {/*====== Sign up with social platforms start =======*/}
-            <div className="register-social-content">
-              <p className="social-text">Və ya Sosial platformalarla daxil olun</p>
+          {/* <div className="register-social-content">
+            <p className="social-text">Və ya Sosial platformalarla daxil olun</p>
+          </div>
+          <div className="register-extra">
+            <div className="social-media">
+              <Link to="#!" className="login-social-icon">
+                <FacebookIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <LinkedInIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <GoogleIcon />
+              </Link>
+              <Link to="#!" className="login-social-icon">
+                <TwitterIcon />
+              </Link>
             </div>
-            <div className="register-extra">
-              <div className="social-media">
-                <Link to="#!" className="login-social-icon">
-                  <FacebookIcon />
-                </Link>
-                <Link to="#!" className="login-social-icon">
-                  <LinkedInIcon />
-                </Link>
-                <Link to="#!" className="login-social-icon">
-                  <GoogleIcon />
-                </Link>
-                <Link to="#!" className="login-social-icon">
-                  <TwitterIcon />
-                </Link>
-              </div>
-            </div>
-            {/*====== Sign up with social platforms end =======*/}
-          </form>
+          </div> */}
+          {/*====== Sign up with social platforms end =======*/}
+          {/* </form>  */}
         </div>
         <div className="panels-container">
           {/* Sing Up Content */}
           <div className="panel right-panel">
             <div className="content">
-              <h3>Bizdən birisən ?</h3>
+              <h3 style={{ color: "#fff" }}>One of us ?</h3>
               <p>
-                Elə isə aşağıdakı "Daxil ol" düyməsinə toxun və saytdan istifadə et!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laboriosam ad deleniti.
               </p>
               <Link to="/login">
                 <button className="btn-item transparent" id="sign-in-btn">
-                  Daxil ol
+                  SIGN IN
                 </button>
               </Link>
             </div>
