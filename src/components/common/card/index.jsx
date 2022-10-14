@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import React from 'react'
 import Slider from 'react-slick';
-import { popular } from '../../../dummyData.js'
+import { MyBlogs } from '../../../dummyData.js'
 import Side from '../../home/sideContent/side/Side.jsx';
 import Heading from '../heading/Heading.jsx';
 function BlogCard({ name = "Category" }) {
@@ -23,7 +23,7 @@ function BlogCard({ name = "Category" }) {
         <Heading title={name} />
         <div className="content">
           <Slider {...settings}>
-            {popular
+            {MyBlogs
               .filter((val) => val.catgeory === name)
               .map((val, index) => {
                 return (
