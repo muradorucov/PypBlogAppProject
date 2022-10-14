@@ -5,7 +5,7 @@
   margin: 15px 15px 15px 0;
 }
 
-.popular .box svg{
+.popular .box svg {
   width: 20px;
   height: 20px;
   fill: red;
@@ -13,7 +13,6 @@
 
 .popular .images {
   position: relative;
-  /* height: 150px; */
 }
 
 .popular .img {
@@ -49,4 +48,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+@media only screen and (max-width:820px) and (min-width: 500px) {
+  .popular .images {
+    height: 150px;
+  }
 }

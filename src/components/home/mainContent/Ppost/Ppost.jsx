@@ -36,7 +36,7 @@ const Ppost = () => {
                     </div>
                     <div className='text'>
                       <Link to={`/detail/${val.id}`}>
-                        <h1 className='title'>{val.title.slice(0, 40)}...</h1>
+                        <h1 className='title'>{val.title.slice(0, 30)}...</h1>
                       </Link>
                       <div className='date'>
                         <i className='fas fa-calendar-days'></i>

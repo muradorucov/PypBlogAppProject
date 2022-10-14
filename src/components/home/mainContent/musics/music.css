@@ -38,6 +38,7 @@
   .music img,
   .music .images {
     height: 250px;
+    width: 100%;
   }
   .music .box{
     display: block;
