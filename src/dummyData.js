@@ -364,7 +364,7 @@ export const ppost = [
     {
         id: 1,
         catgeory: "News",
-        title: "We Went Deep Underground For This Amazing Cave Shot",
+        title: "We Went Deep For This Amazing Cave Shot",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
     },
@@ -408,7 +408,7 @@ export const lifestyle = [
     {
         id: 3,
         catgeory: "Reel",
-        title: "Learn How To Nail Your Favorite Look",
+        title: "Learn How To Nail Your Look Look",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
     },
