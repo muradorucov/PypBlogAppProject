@@ -11,6 +11,7 @@
 - [Anar](https://github.com/anarsafar)
 - [Emil](https://github.com/emilhajizade42)
 - [Murad](https://github.com/muradorucov)
+- [Qurban](https://github.com/gurbangurbanzade)
 
 ### Technologies used in the project :
 
