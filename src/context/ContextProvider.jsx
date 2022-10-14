@@ -1,20 +1,21 @@
-import { createContext, useState } from "react";
+import {createContext, useState} from "react";
 
 export const providerContext = createContext(null);
 
-function ContextProvider({ children }) {
-  const [product, setProduct] = useState();
+function ContextProvider({children}) {
+  const [post, setPost] = useState();
   const [suppliers, setSuppliers] = useState([]);
   const [categories, setCategories] = useState([]);
 
   const values = {
-    product,
-    setProduct,
+    post,
+    setPost,
     suppliers,
     setSuppliers,
     categories,
     setCategories,
   };
+
   return (
     <providerContext.Provider value={values}>
       {children}

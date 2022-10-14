@@ -188,7 +188,7 @@ export const world = [
 export const popular = [
     {
         id: 1,
-        catgeory: "world",
+        catgeory: "News",
         title: "Our Favorite Photos From All Around",
         date: "19. February 2022",
         comments: 0,
@@ -197,7 +197,7 @@ export const popular = [
     },
     {
         id: 2,
-        catgeory: "travel",
+        catgeory: "Travel",
         title: "Places To Visit For A Peaceful Holiday",
         date: "19. February 2022",
         comments: 0,
@@ -206,7 +206,7 @@ export const popular = [
     },
     {
         id: 3,
-        catgeory: "sport",
+        catgeory: "Sport",
         title: "Is This The New Boxing Champion?",
         date: "19. February 2022",
         comments: 0,
@@ -215,7 +215,7 @@ export const popular = [
     },
     {
         id: 4,
-        catgeory: "sport",
+        catgeory: "Sport",
         title: "A Detailed Retelling Of Our Trek Through The Dangerous Alps",
         date: "19. February 2022",
         comments: 0,
@@ -224,7 +224,7 @@ export const popular = [
     },
     {
         id: 5,
-        catgeory: "fun",
+        catgeory: "Reel",
         title: "Natural Sunlight Boosts Your Immunity",
         date: "19. February 2022",
         comments: 0,
@@ -233,7 +233,7 @@ export const popular = [
     },
     {
         id: 6,
-        catgeory: "health",
+        catgeory: "Sport",
         title: "Health Benefits From Asparagus",
         date: "19. February 2022",
         comments: 0,
@@ -242,7 +242,7 @@ export const popular = [
     },
     {
         id: 7,
-        catgeory: "fashion",
+        catgeory: "Worklife",
         title: "The Valid Fashion Style For This Fall",
         date: "19. February 2022",
         comments: 0,
@@ -251,7 +251,7 @@ export const popular = [
     },
     {
         id: 8,
-        catgeory: "fun",
+        catgeory: "Reel",
         title: "Vote For The Top Tracks Of The Month",
         date: "19. February 2022",
         comments: 0,
@@ -351,9 +351,9 @@ export const MyBlogs = [
         desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.",
     },
     {
-        id:11,
+        id: 11,
         catgeory: "Tech",
-        title: "Textler For The Top Tracks Of The Month",
+        title: "Metnlerrr For The Top Tracks Of The Month",
         date: "19. February 2022",
         comments: 0,
         cover: "https://picsum.photos/200",
@@ -363,28 +363,28 @@ export const MyBlogs = [
 export const ppost = [
     {
         id: 1,
-        catgeory: "world",
+        catgeory: "News",
         title: "We Went Deep Underground For This Amazing Cave Shot",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
     },
     {
         id: 2,
-        catgeory: "health",
+        catgeory: "Sport",
         title: "6 Reasons Why You Shouldn’t Skip Breakfast",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
     },
     {
         id: 3,
-        catgeory: "food",
+        catgeory: "Reel",
         title: "Our Top 5 Restaurants For A Complete Culinary Experience",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
     },
     {
         id: 4,
-        catgeory: "fashion",
+        catgeory: "Tech",
         title: "Hipster Chic Is In Again: Get Some Glasses",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
@@ -393,28 +393,28 @@ export const ppost = [
 export const lifestyle = [
     {
         id: 1,
-        catgeory: "world",
+        catgeory: "News",
         title: "Mustang Teases With A New Promo",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
     },
     {
         id: 2,
-        catgeory: "sport",
+        catgeory: "Sport",
         title: "Surfs Up – Places For Killer Waves",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
     },
     {
         id: 3,
-        catgeory: "fashion",
+        catgeory: "Reel",
         title: "Learn How To Nail Your Favorite Look",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
     },
     {
         id: 4,
-        catgeory: "world",
+        catgeory: "Travel",
         title: "Music Playing On R&B Stations",
         date: "19. February 2022",
         cover: "https://picsum.photos/200",
@@ -456,27 +456,23 @@ export const gallery = [
 ]
 export const discover = [
     {
-        title: "games",
+        title: "News",
         cover: "https://picsum.photos/200",
     },
     {
-        title: "sports",
+        title: "Sport",
         cover: "https://picsum.photos/200",
     },
     {
-        title: "humour",
+        title: "Tech",
         cover: "https://picsum.photos/200",
     },
     {
-        title: "gadgets",
+        title: "Travel",
         cover: "https://picsum.photos/200",
     },
     {
-        title: "movies",
-        cover: "https://picsum.photos/200",
-    },
-    {
-        title: "nitendo",
+        title: "Reel",
         cover: "https://picsum.photos/200",
     },
 ]
