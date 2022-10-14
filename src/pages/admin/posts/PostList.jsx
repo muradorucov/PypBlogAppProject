@@ -1,22 +1,11 @@
-/* eslint-disable no-template-curly-in-string */
 import {providerContext} from "../../../context/ContextProvider.jsx";
-
 import {
-  Button,
-  Input,
-  InputNumber,
-  Select,
-  Checkbox,
-  Modal,
-  Form,
-  Table,
-  Space,
+  Button, Input, InputNumber, Select, Checkbox,
+  Modal, Form, Table, Space,
 } from "antd";
 import React, {useEffect, useState, useContext} from "react";
 import toast, {Toaster} from "react-hot-toast";
-
 import {productNetwork} from "../../../network/requests/productNetwork.js";
-import {supplierNetwork} from "../../../network/requests/supplierNetwork.js";
 import {categoryNetwork} from "../../../network/requests/categoryNetwork.js";
 
 const {Option} = Select;
@@ -63,18 +52,12 @@ const ProductList = () => {
       setProduct(data);
     });
   };
-
-  const getSuppliers = () => {
-    supplierNetwork.getAllSuppliers().then((data) => setSuppliers(data));
-  };
-
   const getCategories = () => {
     categoryNetwork.getAllCategories().then((data) => setCategories(data));
   };
 
   useEffect(() => {
     getProducts();
-    getSuppliers();
     getCategories();
   }, []);
 
@@ -314,9 +297,6 @@ const ProductList = () => {
       <Table
         dataSource={product
           ?.map((prod) => {
-            // if (prod.unitPrice.slice(1, 2) !== '$') {
-
-            // }
             prod.unitPrice = `$${prod.unitPrice}`;
 
             return prod;

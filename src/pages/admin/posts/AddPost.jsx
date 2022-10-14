@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Button, Form, Input, Select} from "antd";
 import {productNetwork} from "../../../network/requests/productNetwork";
-import {supplierNetwork} from "../../../network/requests/supplierNetwork";
 import {categoryNetwork} from "../../../network/requests/categoryNetwork";
 import toast, {Toaster} from "react-hot-toast";
 import {useNavigate} from "react-router-dom";
@@ -12,7 +11,6 @@ const {Option} = Select;
 
 const AddPost = () => {
   const [product, setProduct] = useState([]);
-  const [suppliers, setSuppliers] = useState([]);
   const [categories, setCategories] = useState([]);
   const [form] = Form.useForm();
   const [post, setPost] = useState({});
@@ -22,16 +20,11 @@ const AddPost = () => {
     productNetwork.getAllProducts().then((data) => setProduct(data));
   };
 
-  const getSuppliers = () => {
-    supplierNetwork.getAllSuppliers().then((data) => setSuppliers(data));
-  };
-
   const getCategories = () => {
     categoryNetwork.getAllCategories().then((data) => setCategories(data));
   };
 
   useEffect(() => {
-    getSuppliers();
     getCategories();
   }, []);
 
