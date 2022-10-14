@@ -61,8 +61,8 @@ const Footer = () => {
       </footer>
       <div className="legal  ">
         <div className="container flexSB">
-          <p>© all rights reserved</p>
-          <p>made by Team-1</p>
+          <p>© All rights reserved</p>
+          <p>Made by Team-1</p>
         </div>
       </div>
     </>
