@@ -15,12 +15,12 @@ import ForgotPassword from "../pages/site/ForgotPassword";
 import AdminRoot from "../pages/admin/AdminRoot";
 import Dashboard from "../pages/admin/Dashboard";
 import PostList from "../pages/admin/posts/PostList.jsx";
-import OrderList from "../pages/admin/orderList/OrderList";
 import AddPost from "../pages/admin/posts/AddPost.jsx";
-import AddOrder from "../pages/admin/orderList/addOrder/AddOrder";
 import AddCategory from "../pages/admin/categories/AddCategory.jsx";
 import UpdateCategory from "../pages/admin/categories/UpdateCategory.jsx";
 import CategoryList from "../pages/admin/categories/CategoryList.jsx";
+import UpdatePost from "../pages/admin/posts/UpdatePost.jsx";
+import Users from "../pages/admin/users/Users.jsx";
 
 export const ROUTES = [
   {
@@ -108,16 +108,12 @@ export const ROUTES = [
         element: <PostList/>,
       },
       {
-        path: "orders",
-        element: <OrderList/>,
-      },
-      {
         path: "add-post",
         element: <AddPost/>,
       },
       {
-        path: "add-order",
-        element: <AddOrder/>,
+        path: "update-post",
+        element: <UpdatePost/>,
       },
       {
         path: "categories",
@@ -130,6 +126,10 @@ export const ROUTES = [
       {
         path: "update-category",
         element: <UpdateCategory/>,
+      },
+      {
+        path: "users",
+        element: <Users/>,
       },
     ],
   },

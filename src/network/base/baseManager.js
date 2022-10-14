@@ -1,4 +1,4 @@
-import { axiosInstance, contactAxiosInstance } from "../axiosInstance/index";
+import {axiosInstance} from "../axiosInstance/index";
 
 export const baseManager = {
   getAll: async (url) => {

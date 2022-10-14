@@ -93,12 +93,7 @@ const items = [
     getItem(<Link to="/admin/add-post">Add Post</Link>, "6"),
     getItem(<Link to="/admin/update-post">Update Post</Link>, "7"),
   ]),
-  getItem("Users", "sub4", <FileProtectOutlined/>, [
-    getItem(<Link to="/admin/orders">User Table</Link>, "8"),
-    getItem(<Link to="/admin/add-order">Add User</Link>, "9"),
-  ]),
-
-  getItem("Users", "10", <TeamOutlined/>),
+  getItem(<Link to="/admin/users">Users</Link>, "10", <TeamOutlined/>),
   getItem("Files", "11", <FileOutlined/>),
 ];
 
