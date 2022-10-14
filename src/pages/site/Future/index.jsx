@@ -12,7 +12,7 @@ function Future() {
         <link rel="canonical" href="https://www.tacobell.com/" />
     </Helmet>
     <Navbar />
-    <BlogCard name='Future News'/>
+    <BlogCard name='Future'/>
     <Footer />
 </>
   )

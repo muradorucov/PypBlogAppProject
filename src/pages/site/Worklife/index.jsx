@@ -12,7 +12,7 @@ function Worklife() {
                 <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
             <Navbar />
-            <BlogCard name='Worklife News'/>
+            <BlogCard name='Worklife'/>
             <Footer />
         </>
     )

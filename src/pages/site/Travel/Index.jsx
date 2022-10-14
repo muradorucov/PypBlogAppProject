@@ -12,7 +12,7 @@ function Travel() {
                 <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
             <Navbar />
-            <BlogCard name='Travel News'/>
+            <BlogCard name='Travel'/>
             <Footer />
         </>
     )
