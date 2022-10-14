@@ -23,7 +23,7 @@ const Music = () => {
         <div className="content">
           <Slider {...settings}>
             {popular
-              .filter((val) => val.catgeory === "fun")
+              .filter((val) => val.catgeory === "Reel")
               .map((val, index) => {
                 return (
                   <div key={index} className="items">

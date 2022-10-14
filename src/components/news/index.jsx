@@ -26,6 +26,8 @@ const NewsBox = () => {
               .map((val, index) => {
                 return (
                   <div key={index} className="items">
+                    <Link  to={`/detail/${val.id}`}>
+                    
                     <div className="box shadow flexSB">
                       <div className="images">
                         <div className="img">
@@ -64,6 +66,7 @@ const NewsBox = () => {
                         </div>
                       </div>
                     </div>
+                    </Link>
                   </div>
                 );
               })}

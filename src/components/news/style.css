@@ -18,6 +18,7 @@
 }
 
 .mews .desc{
+  color: gray;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 70px;
