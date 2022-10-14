@@ -13,7 +13,7 @@ function BlogRecentPost() {
             <div className="col-6 col-respon-4">
                 <div className="news-item">
                     <Link to="#!" className="news-img">
-                        <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/news-img-3.jpg" alt="" />
+                        <img src="https://picsum.photos/200" alt="" />
                     </Link>
                     <div className="news-info">
                         <div className="news-day">
@@ -35,7 +35,7 @@ function BlogRecentPost() {
             <div className="col-6 col-respon-4">
                 <div className="news-item">
                     <Link to="#!" className="news-img">
-                        <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/news-img-3.jpg" alt="" />
+                        <img src="https://picsum.photos/200" alt="" />
                     </Link>
                     <div className="news-info">
                         <div className="news-day">
