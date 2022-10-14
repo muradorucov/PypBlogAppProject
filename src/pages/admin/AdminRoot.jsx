@@ -1,26 +1,27 @@
-import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, {useState} from "react";
+import {Link, Outlet} from "react-router-dom";
 import Icon, {
   DesktopOutlined,
   FileOutlined,
   PieChartOutlined,
   TeamOutlined,
   FileProtectOutlined,
-  GlobalOutlined,
+  GlobalOutlined, UserOutlined,
   createFromIconfontCN,
 } from "@ant-design/icons";
-import { Layout, Menu, Space } from "antd";
+import {Layout, Menu, Space} from "antd";
 import Logo from "../../assets/img/Code-Academy.jpg";
 
-const { Header, Content, Footer, Sider } = Layout;
+const {Header, Content, Footer, Sider} = Layout;
 const IconFont = createFromIconfontCN({
   scriptUrl: [
-    "//at.alicdn.com/t/font_1788044_0dwu4guekcwr.js", // icon-javascript, icon-java, icon-shoppingcart (overrided)
+    "//at.alicdn.com/t/font_1788044_0dwu4guekcwr.js",
   ],
 });
 const HeartSvg = () => (
   <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 1024 1024">
-    <path d="M923 283.6c-13.4-31.1-32.6-58.9-56.9-82.8-24.3-23.8-52.5-42.4-84-55.5-32.5-13.5-66.9-20.3-102.4-20.3-49.3 0-97.4 13.5-139.2 39-10 6.1-19.5 12.8-28.5 20.1-9-7.3-18.5-14-28.5-20.1-41.8-25.5-89.9-39-139.2-39-35.5 0-69.9 6.8-102.4 20.3-31.4 13-59.7 31.7-84 55.5-24.4 23.9-43.5 51.7-56.9 82.8-13.9 32.3-21 66.6-21 101.9 0 33.3 6.8 68 20.3 103.3 11.3 29.5 27.5 60.1 48.2 91 32.8 48.9 77.9 99.9 133.9 151.6 92.8 85.7 184.7 144.9 188.6 147.3l23.7 15.2c10.5 6.7 24 6.7 34.5 0l23.7-15.2c3.9-2.5 95.7-61.6 188.6-147.3 56-51.7 101.1-102.7 133.9-151.6 20.7-30.9 37-61.5 48.2-91 13.5-35.3 20.3-70 20.3-103.3 0.1-35.3-7-69.6-20.9-101.9z" />
+    <path
+      d="M923 283.6c-13.4-31.1-32.6-58.9-56.9-82.8-24.3-23.8-52.5-42.4-84-55.5-32.5-13.5-66.9-20.3-102.4-20.3-49.3 0-97.4 13.5-139.2 39-10 6.1-19.5 12.8-28.5 20.1-9-7.3-18.5-14-28.5-20.1-41.8-25.5-89.9-39-139.2-39-35.5 0-69.9 6.8-102.4 20.3-31.4 13-59.7 31.7-84 55.5-24.4 23.9-43.5 51.7-56.9 82.8-13.9 32.3-21 66.6-21 101.9 0 33.3 6.8 68 20.3 103.3 11.3 29.5 27.5 60.1 48.2 91 32.8 48.9 77.9 99.9 133.9 151.6 92.8 85.7 184.7 144.9 188.6 147.3l23.7 15.2c10.5 6.7 24 6.7 34.5 0l23.7-15.2c3.9-2.5 95.7-61.6 188.6-147.3 56-51.7 101.1-102.7 133.9-151.6 20.7-30.9 37-61.5 48.2-91 13.5-35.3 20.3-70 20.3-103.3 0.1-35.3-7-69.6-20.9-101.9z"/>
   </svg>
 );
 
@@ -74,57 +75,53 @@ const HeartIcon = (props) => <Icon component={HeartSvg} {...props} />;
 const PandaIcon = (props) => <Icon component={PandaSvg} {...props} />;
 
 function getItem(label, key, icon, children) {
-  return { key, icon, children, label };
+  return {key, icon, children, label};
 }
 
 const items = [
-  getItem(<Link to="/">Website</Link>, "12", <GlobalOutlined />),
-  getItem("Dashboard", "sub1", <PieChartOutlined />, [
+  getItem(<Link to="/">Website</Link>, "12", <GlobalOutlined/>),
+  getItem("Dashboard", "sub1", <PieChartOutlined/>, [
     getItem(<Link to="/admin">Analytics</Link>, "1"),
-    getItem("Commerce", "2"),
   ]),
-  getItem("Posts", "sub2", <DesktopOutlined />, [
-    getItem(<Link to="/admin/products">Post Table</Link>, "3"),
-    getItem(<Link to="/admin/add-product">Add Post</Link>, "4"),
+  getItem('Categories', 'sub2', <UserOutlined/>, [
+    getItem(<Link to="/admin/categories">Category Table</Link>, "2"),
+    getItem(<Link to="/admin/add-category">Add Category</Link>, "3"),
+    getItem(<Link to="/admin/update-category">Update Category</Link>, "4"),
   ]),
-  // getItem('Suppliers', 'sub3', <UserOutlined/>, [
-  // 	getItem('Tom', '6'),
-  // 	getItem('Bill', '7'),
-  // ]),
-  getItem("Users", "sub3", <FileProtectOutlined />, [
-    getItem(<Link to="/admin/orders">User Table</Link>, "8"),
-    getItem(<Link to="/admin/add-order">Add User</Link>, "9"),
+  getItem("Posts", "sub3", <DesktopOutlined/>, [
+    getItem(<Link to="/admin/posts">Post Table</Link>, "5"),
+    getItem(<Link to="/admin/add-post">Add Post</Link>, "6"),
+    getItem(<Link to="/admin/update-post">Update Post</Link>, "7"),
   ]),
-
-  getItem("Users", "10", <TeamOutlined />),
-  getItem("Files", "11", <FileOutlined />),
+  getItem(<Link to="/admin/users">Users</Link>, "10", <TeamOutlined/>),
+  getItem("Files", "11", <FileOutlined/>),
 ];
 
 function AdminRoot() {
   const [collapsed, setCollapsed] = useState(false);
   return (
     <>
-      <Layout style={{ minHeight: "100vh" }}>
+      <Layout style={{minHeight: "100vh"}}>
         <Sider
           collapsible
           collapsed={collapsed}
           onCollapse={(value) => setCollapsed(value)}
         >
-          <Space style={{ margin: "14.8px 85px" }}>
-            <HeartIcon style={{ fontSize: "20px", color: "hotpink" }} />
-            <PandaIcon style={{ fontSize: "32px" }} />
+          <Space style={{margin: "14.8px 85px"}}>
+            <HeartIcon style={{fontSize: "20px", color: "hotpink"}}/>
+            <PandaIcon style={{fontSize: "32px"}}/>
             <IconFont
               type="icon-javascript"
-              style={{ fontSize: "24px", color: "white" }}
+              style={{fontSize: "24px", color: "white"}}
             />
             <IconFont
               type="icon-java"
-              style={{ fontSize: "24px", color: "white" }}
+              style={{fontSize: "24px", color: "white"}}
             />
           </Space>
           <div className="logo">
             <Link to="/admin">
-              <img src={Logo} style={{ width: "100%", marginBottom: 30 }} />
+              <img src={Logo} style={{width: "100%", marginBottom: 30}} alt="Logo"/>
             </Link>
           </div>
           <Menu
@@ -135,13 +132,13 @@ function AdminRoot() {
           />
         </Sider>
         <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }} />
-          <Content style={{ margin: "0 16px" }}>
-            <Outlet />
+          <Header className="site-layout-background" style={{padding: 0}}/>
+          <Content style={{margin: "0 16px"}}>
+            <Outlet/>
           </Content>
-          <Footer style={{ textAlign: "center" }}>
+          <Footer style={{textAlign: "center"}}>
             {" "}
-            PYP Frontend ©2022 Created by Hajar{" "}
+            PYP Frontend ©2022 Created by PYP Team1{" "}
           </Footer>
         </Layout>
       </Layout>

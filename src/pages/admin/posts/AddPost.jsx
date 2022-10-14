@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Button, Form, Input, InputNumber, Select, Checkbox } from "antd";
-import { productNetwork } from "../../../network/requests/productNetwork";
-import { supplierNetwork } from "../../../network/requests/supplierNetwork";
-import { categoryNetwork } from "../../../network/requests/categoryNetwork";
-import toast, { Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-
-import { CKEditor } from "@ckeditor/ckeditor5-react";
+import React, {useEffect, useState} from "react";
+import {Button, Form, Input, Select} from "antd";
+import {productNetwork} from "../../../network/requests/productNetwork";
+import {categoryNetwork} from "../../../network/requests/categoryNetwork";
+import toast, {Toaster} from "react-hot-toast";
+import {useNavigate} from "react-router-dom";
+import {CKEditor} from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-// import TextEditor from "./TextEditor";
 
-const { Option } = Select;
+const {Option} = Select;
 
-const AddProduct = () => {
+const AddPost = () => {
   const [product, setProduct] = useState([]);
-  const [suppliers, setSuppliers] = useState([]);
   const [categories, setCategories] = useState([]);
   const [form] = Form.useForm();
   const [post, setPost] = useState({});
@@ -24,23 +20,18 @@ const AddProduct = () => {
     productNetwork.getAllProducts().then((data) => setProduct(data));
   };
 
-  const getSuppliers = () => {
-    supplierNetwork.getAllSuppliers().then((data) => setSuppliers(data));
-  };
-
   const getCategories = () => {
     categoryNetwork.getAllCategories().then((data) => setCategories(data));
   };
 
   useEffect(() => {
-    getSuppliers();
     getCategories();
   }, []);
 
   function addProduct(values) {
     productNetwork.addProduct(values).then((data) => getProducts());
     notify("Product added successfully");
-    navigate("/admin/products");
+    navigate("/admin/posts");
     form.resetFields();
   }
 
@@ -102,6 +93,7 @@ const AddProduct = () => {
       },
     };
   }
+
   function uploadPlugin(editor) {
     editor.plugins.get("FileRepository").createUploadAdapter = (loader) => {
       return uploadAdapter(loader);
@@ -118,7 +110,7 @@ const AddProduct = () => {
         style={formStyle}
       >
         <Form.Item
-          style={{ width: 350 }}
+          style={{width: 350}}
           name="namePost"
           label="Title"
           rules={[
@@ -127,7 +119,7 @@ const AddProduct = () => {
             },
           ]}
         >
-          <Input />
+          <Input/>
         </Form.Item>
 
         <Form.Item
@@ -141,7 +133,7 @@ const AddProduct = () => {
         >
           <Select
             defaultValue="Select Category"
-            style={{ width: 200 }}
+            style={{width: 200}}
             onChange={handleChange}
           >
             {categories?.map((category) => (
@@ -167,7 +159,7 @@ const AddProduct = () => {
             }}
             onChange={(event, editor) => {
               const data = editor.getData();
-              console.log({ data });
+              console.log({data});
               setPost(data);
             }}
             // onBlur={(event, editor) => {
@@ -186,9 +178,9 @@ const AddProduct = () => {
         </Form.Item>
       </Form>
 
-      <Toaster />
+      <Toaster/>
     </div>
   );
 };
 
-export default AddProduct;
+export default AddPost;
