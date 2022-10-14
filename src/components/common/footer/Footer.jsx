@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <div className="category-box">
             <div className="box">
-              <h3>SPORT</h3>
+              <h3 style={{color:"#fff"}}>SPORT</h3>
               <div className="item">
                 <img src="https://picsum.photos/200" alt="" />
                 <p>Google To Boost Android Security In Few Days</p>
@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="box">
-              <h3>CRICKET</h3>
+              <h3 style={{color:"#fff"}}>CRICKET</h3>
               <div className="item">
                 <img src="https://picsum.photos/200" alt="" />
                 <p>US Promises to give Intel aid to locate the soldiers</p>
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="box">
-            <h3>LABELS</h3>
+            <h3 style={{color:"#fff"}}>LABELS</h3>
             <ul>
               <li>
                 <span>Boxing</span> <label>(5)</label>

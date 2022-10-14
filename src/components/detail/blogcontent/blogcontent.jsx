@@ -33,7 +33,7 @@ function Blogcontent() {
                 </div>
             </div>
             <div className="news-post-img">
-                <img src="https://muradorucov.github.io/PathSoftTemplateClone/img/news-img-1.jpg" alt="" />
+                <img src="https://picsum.photos/200" alt="" />
             </div>
             <article className="news-post-article">
                 <p>Whenever I’m TA for a introductory CS class where students learn some programming
