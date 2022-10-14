@@ -1,5 +1,7 @@
 # Blog App Repo
 
+- [Site Live](https://blog-app-pyp.netlify.app/)
+
 ### Short information about the project :
 
 - The project has started: 10 Oct 2022
