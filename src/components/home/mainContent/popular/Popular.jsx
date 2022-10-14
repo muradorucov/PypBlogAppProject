@@ -49,7 +49,7 @@ const Popular = () => {
                         </div>
                       </Link>
                     </div>
-                    <div className="text row">
+                    <div className="text row flex-direction-justify ">
                       <Link to={`/detail/${val.id}`}>
                         <h1 className="title">{val.title}</h1>
                       </Link>
