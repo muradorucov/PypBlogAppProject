@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import "./style.css"
 
-function ForgotPassword() {
+function ResetPassword() {
     return (
         <>
             <Helmet>
-                <title>Forgot Password Page</title>
+                <title>Reset Password Page</title>
                 <link rel="canonical" href="https://www.tacobell.com/" />
             </Helmet>
             <div className="reset-body">
@@ -24,22 +24,33 @@ function ForgotPassword() {
                         </div>
                         <div className="col-md-6 col-sm-12 login-form">
                             <div className="login-form-in">
-                                <h1 className="auth_title text-left">Having a problem logging in?</h1>
+                                <h1 className="auth_title text-left">Reset password</h1>
                                 <form>
                                     <div
                                         className="alert alert-success bg-soft-primary border-0"
                                         role="alert"
-                                    >Enter your email address and we'll send you an email with instructions to reset your password.
+                                    >Create a new password that you don't have and haven't used before.
                                     </div>
                                     <div className="form-group">
                                         <input
-                                            type="email"
+                                            type="password"
                                             className="form-control"
-                                            name="email"
-                                            placeholder="Your Email"
+                                            name="password"
+                                            placeholder="New Password"
                                         />
                                         <span className="reset-text-danger">
-                                            This is email not found
+                                            Create a password at least 6 characters long.
+                                        </span>
+                                    </div>
+                                    <div className="form-group">
+                                        <input
+                                            type="password"
+                                            className="form-control"
+                                            name="confirimpassword"
+                                            placeholder="Confirim New Password"
+                                        />
+                                        <span className="reset-text-danger">
+                                            Create a password at least 6 characters long.
                                         </span>
                                     </div>
                                     <div className="form-group">
@@ -49,10 +60,6 @@ function ForgotPassword() {
                                         >
                                             Reset Password
                                         </button>
-                                    </div>
-                                    <div className="form-group other_auth_links">
-                                        <Link to="/login">Login</Link>
-                                        <Link to="/register">Register</Link>
                                     </div>
                                 </form>
                             </div>
@@ -70,4 +77,4 @@ function ForgotPassword() {
     )
 }
 
-export default ForgotPassword
+export default ResetPassword
