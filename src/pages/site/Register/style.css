@@ -13,7 +13,7 @@ body {
 }
 
 .forms-container {
-  width: 60%;
+  width: 70%;
 }
 
 .register-container {
@@ -180,7 +180,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   position: relative;
   z-index: 6;
   margin: 70px 0;
-  margin-left: 7rem;
 }
 
 .right-panel .content {
@@ -247,7 +246,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .register-container::before {
     height: 2560px;
     width: 2500px;
-    transform: translate(47%, 31%);
+    transform: translate(47%, 29%);
     right: 62%;
   }
 
@@ -287,7 +286,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .register-container::before {
     height: 2560px;
     width: 1700px;
-    transform: translate(53%, 31%);
+    transform: translate(53%, 29%);
   }
 
   .register-input {
@@ -324,7 +323,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .right-panel .content {
     padding: 1.5rem 1rem;
-    padding-top: 3rem;
   }
 
   .btn-item {

@@ -78,9 +78,9 @@ const Register = () => {
       <div className="register-container">
         <div className="forms-container">
           <form action="/" className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
-            <h2 className="login-title">Sign in</h2>
+            <h2 className="login-title">SIGIN UP</h2>
 
-            {/*====== Sign In Input Start =======*/}
+            {/*====== Sign UP Input Start =======*/}
             <div className="login-input-field">
               <i>
                 <PersonIcon />
@@ -153,11 +153,8 @@ const Register = () => {
                 <></>
               )}
             </div>
-            <input type="submit" value="LOGIN" className="solid" />
+            <input type="submit" value="SIGIN UP" className="solid" />
             {/*====== Sign In Input end =======*/}
-            <Link to="#!" className="reset">
-              Forget Password?
-            </Link>
             <div style={{ cursor: "pointer" }}>
               <ReCAPTCHA
                 sitekey={"6LfsAnYiAAAAAK4gpGCB19QOzQTvL0gjYGQKZxSI"}
@@ -185,72 +182,6 @@ const Register = () => {
             </div>
             {/*====== Sign in with social platforms end =======*/}
           </form>
-          {/* <form action="/login" className="sign-up-form " onSubmit={handleSubmit(onSubmit)}>
-            <h2 className="register-title">Qeydiyyat</h2>
-            <div className="register-input">
-              <label htmlFor="fullName">
-                <i className="fas fa-user" aria-hidden="true" />
-                <span className="label-register">Full name</span>
-                <div className="input-field margin-input">
-                  
-                </div>
-              </label>
-              <label htmlFor="email">
-                <i className="fas fa-user" aria-hidden="true" />
-                <span className="label-register">Soyad</span>
-                <div className="input-field ">
-                  
-                </div>
-              </label>
-            </div>
-            <div className="register-input">
-              <label htmlFor="password">
-                <i className="fas fa-phone" />
-                <span className="label-register">Telefon Nömrəsi</span>
-                <div className="input-field margin-input">
-                  
-                </div>
-              </label>
-              <label htmlFor="confirmPassword">
-                <i className="fas fa-envelope" />
-                <span className="label-register">Email</span>
-                <div className="input-field">
-                  
-                </div>
-              </label>
-            </div>
-            <div style={{ margin: " 5px auto" }}>
-              <ReCAPTCHA
-                sitekey={"6LeZn3ciAAAAAPoRedk7nhKfb0Ig-GNfzOCsTPwc"}
-                ref={captchaRef}
-                onChange={onChange}
-              />
-            </div>
-            <div className="register-btn">
-              <input type="submit" className="btn-item" value="Qeydiyyat" />
-            </div>
-            {/*====== Sign up with social platforms start =======*/}
-          {/* <div className="register-social-content">
-            <p className="social-text">Və ya Sosial platformalarla daxil olun</p>
-          </div>
-          <div className="register-extra">
-            <div className="social-media">
-              <Link to="#!" className="login-social-icon">
-                <FacebookIcon />
-              </Link>
-              <Link to="#!" className="login-social-icon">
-                <LinkedInIcon />
-              </Link>
-              <Link to="#!" className="login-social-icon">
-                <GoogleIcon />
-              </Link>
-              <Link to="#!" className="login-social-icon">
-                <TwitterIcon />
-              </Link>
-            </div>
-          </div> */}
-          {/*====== Sign up with social platforms end =======*/}
-          {/* </form>  */}
         </div>
         <div className="panels-container">
           {/* Sing Up Content */}
