@@ -338,7 +338,7 @@ form.sign-in-form {
         height: 45%;
     }
 
-    form {
+    .sign-in-form  {
         padding: 0 1.5rem;
     }
 

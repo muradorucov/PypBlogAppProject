@@ -37,6 +37,9 @@
 @media screen and (max-width: 768px) {
   .mews img,
   .mews .images {
-    height: 350px;
+    height: 250px;
+  }
+  .mews .box{
+    display: block ;
   }
 }

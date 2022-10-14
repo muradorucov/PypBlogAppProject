@@ -13,12 +13,16 @@
 
 .popular .images {
   position: relative;
-  height: 150px;
+  /* height: 150px; */
+}
+
+.popular .img {
+  height: 100%;
 }
 
 .popular img {
   width: 100%;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
 }
 
