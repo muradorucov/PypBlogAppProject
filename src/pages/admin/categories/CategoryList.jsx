@@ -1,26 +1,32 @@
 import React, {useContext, useEffect} from 'react';
-import {Space, Table, Tag} from 'antd';
+import {Button, Checkbox, Form, Input, InputNumber, Modal, Select, Space, Table} from 'antd';
 import {providerContext} from "../../../context/ContextProvider.jsx";
 import {categoryNetwork} from "../../../network/requests/categoryNetwork.js";
 
+
 const columns = [
+  // {
+  //   title: "ID",
+  //   dataIndex: "_id",
+  //   key: "_id",
+  // },
   {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
   },
   {
-    title: 'Description',
-    dataIndex: 'description',
-    key: 'description',
+    title: "Description",
+    dataIndex: "description",
+    key: "description",
   },
 ];
 
 const CategoryList = () => {
   const {categories, setCategories} = useContext(providerContext);
 
-  const getCategory = () => {
-    categoryNetwork.getAllCategories().then((data) => {
+  const getCategory = async () => {
+    await categoryNetwork.getAllCategories().then((data) => {
       setCategories(data);
     });
   };
@@ -32,8 +38,11 @@ const CategoryList = () => {
   console.log(categories)
   return (
     <div>
-      category
-      {/*<Table columns={columns} dataSource={data}/>*/}
+      <Table
+        dataSource={categories?.data?.cats?.sort((a, b) => a.id - b.id)}
+        columns={columns}
+        rowKey={(product) => product.id}
+      />
     </div>
   );
 };
