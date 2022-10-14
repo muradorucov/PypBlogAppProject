@@ -39,7 +39,7 @@ function ForgotPassword() {
                                             placeholder="Your Email"
                                         />
                                         <span className="reset-text-danger">
-                                            Bu email qeydiyyatdan keçməyib
+                                            This is email not found
                                         </span>
                                     </div>
                                     <div className="form-group">
