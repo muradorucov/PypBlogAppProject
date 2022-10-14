@@ -4,6 +4,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import ReCAPTCHA from "react-google-recaptcha";
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
 import "./style.css";
 import * as yup from "yup";
 
@@ -51,14 +57,21 @@ const Login = () => {
     <>
       <Helmet>
         <title>Log In Page</title>
-        <link rel="canonical" href="https://www.tacobell.com/" />
+        <Link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <section className="form-container forms">
-        <div className="form login">
-          <div className="form-content">
-            <header>Login</header>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="field input-field">
+      <div className="container-login container-sign-in">
+        <div className="login-forms-container">
+          <div className="signin-signup">
+            {/* ========= Sign In Form Start========== */}
+
+            <form action="/" className="sign-in-form" onSubmit={handleSubmit(onSubmit)}>
+              <h2 className="login-title">Sign in</h2>
+
+              {/*====== Sign In Input Start =======*/}
+              <div className="login-input-field">
+                <i>
+                  <EmailIcon />
+                </i>
                 <input
                   placeholder="Email"
                   className={errors.email ? "input error-border" : "input"}
@@ -68,13 +81,13 @@ const Login = () => {
                   id="email"
                 />
                 {errors.email ? (
-                  <div className="error">{errors.email.message}</div>
+                  <div className="login-text-danger error">{errors.email.message}</div>
                 ) : (
                   <></>
                 )}
               </div>
-
-              <div className="field input-field">
+              <div className="login-input-field">
+                <i><LockIcon /></i>
                 <input
                   type="password"
                   placeholder="Password"
@@ -86,51 +99,63 @@ const Login = () => {
                   id="password"
                 />
                 {errors.password ? (
-                  <div className="error">{errors.password.message}</div>
+                  <div className="login-text-danger error">{errors.password.message}</div>
                 ) : (
                   <></>
                 )}
               </div>
-
-              <div className="form-link">
-                <a href="#" className="forgot-pass">
-                  Forgot password?
-                </a>
-              </div>
-              <div style={{ margin: " 5px auto", width: "80%" }}>
+              <input type="submit" value="LOGIN" className="solid" />
+              {/*====== Sign In Input end =======*/}
+              <Link to="#!" className="reset">
+                Forget Password?
+              </Link>
+              <div style={{ margin: " 5px auto", cursor: "pointer" }}>
                 <ReCAPTCHA
                   sitekey={"6LfsAnYiAAAAAK4gpGCB19QOzQTvL0gjYGQKZxSI"}
                   ref={captchaRef}
                   onChange={onChange}
                 />
               </div>
-              <div className="field button-field">
-                <button>Login</button>
-              </div>
-            </form>
-
-            <div className="form-link">
-              <span>
-                Don't have an account?{" "}
-                <Link className="link signup-link" to="/register">
-                  Signup
+              {/*====== Sign in with social platforms Start =======*/}
+              <p className="login-social-text">
+                Or Sign in with social platforms
+              </p>
+              <div className="login-social-media">
+                <Link to="#!" className="login-social-icon">
+                  <FacebookIcon />
                 </Link>
-              </span>
+                <Link to="#!" className="login-social-icon">
+                  <LinkedInIcon />
+                </Link>
+                <Link to="#!" className="login-social-icon">
+                  <GoogleIcon />
+                </Link>
+                <Link to="#!" className="login-social-icon">
+                  <TwitterIcon />
+                </Link>
+              </div>
+              {/*====== Sign in with social platforms end =======*/}
+            </form>
+            {/*========= Sign In Form End==========*/}
+          </div>
+          <div className="login-panels-container">
+            {/* Sing In Content */}
+            <div className="panel left-panel">
+              <div className="content">
+                <h3 style={{ color: "#fff" }}>New here ?</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!
+                </p>
+                <Link to="/register">
+                  <button className="solid transparent" id="sign-up-btn">SIGN UP
+                  </button>
+                </Link>
+              </div>
+              <img src="https://raw.githubusercontent.com/sefyudem/Sliding-Sign-In-Sign-Up-Form/955c6482aeeb2f0e77c1f3c66354da3bc4d7a72d/img/log.svg" className="image" alt="Logo" />
             </div>
           </div>
-
-          <div className="line"></div>
-
-          <div className="media-options">
-            <a href="#" className="field google">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
-                <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
-              </svg>
-              <span>Login with Google</span>
-            </a>
-          </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
