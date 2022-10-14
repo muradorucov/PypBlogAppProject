@@ -72,7 +72,7 @@ const Register = () => {
   return (
     <>
       <Helmet>
-        <title>Log In Page</title>
+        <title>Sign up Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div className="register-container">
