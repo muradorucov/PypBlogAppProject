@@ -1,39 +1,50 @@
-import React, {useEffect, useState} from "react";
-import {Button, Form, Input, Select} from "antd";
-import {productNetwork} from "../../../network/requests/productNetwork";
-import {categoryNetwork} from "../../../network/requests/categoryNetwork";
-import toast, {Toaster} from "react-hot-toast";
-import {useNavigate} from "react-router-dom";
-import {CKEditor} from "@ckeditor/ckeditor5-react";
+import React, { useEffect, useState } from "react";
+import { Button, Form, Input, Select } from "antd";
+import toast, { Toaster } from "react-hot-toast";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-
-const {Option} = Select;
+const { Option } = Select;
+import axios from "axios";
 
 const AddPost = () => {
-  const [product, setProduct] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [form] = Form.useForm();
-  const [post, setPost] = useState({});
-  let navigate = useNavigate();
+  const [desc, setDesc] = useState({});
+  const [img, setImg] = useState();
+  const [categories, setCategories] = useState();
 
-  const getProducts = () => {
-    productNetwork.getAllProducts().then((data) => setProduct(data));
-  };
+  function AddBlog(values) {
+    notify("Post added successfully");
 
-  const getCategories = () => {
-    categoryNetwork.getAllCategories().then((data) => setCategories(data));
-  };
+    const sendData = {
+      title: values.title,
+      category: values.category,
+      desc: desc.data,
+      username: "anar",
+      photo: {
+        src: img.name,
+      },
+      uploaded_file: img,
+    };
 
-  useEffect(() => {
-    getCategories();
-  }, []);
+    console.log(sendData);
 
-  function addProduct(values) {
-    productNetwork.addProduct(values).then((data) => getProducts());
-    notify("Product added successfully");
-    navigate("/admin/posts");
+    const body = new FormData();
+    body.append("file", img, "uploaded_file");
+
+    axios.request({
+      method: "post",
+      url: "http://localhost:5000/api/posts/",
+      data: sendData,
+      headers: { "Content-Type": "multipart/form-data" },
+    });
     form.resetFields();
   }
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/categories/")
+      .then((res) => setCategories(res.data));
+  }, []);
 
   const validateMessages = {
     required: `${label} is required!`
@@ -61,32 +72,12 @@ const AddPost = () => {
     });
   };
 
-  const API_URI = "https://noteyard-backend.heroku.app";
-  const UPLOAD_URL = "api/blogs/upload";
-
   function uploadAdapter(loader) {
     return {
       upload: () => {
         return new Promise((resolve, reject) => {
-          const body = new FormData();
           loader.file.then((file) => {
-            body.append("files", file);
-            // let headers = new Headers();
-            // headers.append("Origin", "http://localhost:3000");
-            fetch(`${API_URL}/${UPLOAD_ENDPOINT}`, {
-              method: "post",
-              body: body,
-              // mode: "no-cors"
-            })
-              .then((res) => res.json())
-              .then((res) => {
-                resolve({
-                  default: `${API_URL}/${res.filename}`,
-                });
-              })
-              .catch((err) => {
-                reject(err);
-              });
+            setImg(file);
           });
         });
       },
@@ -99,18 +90,20 @@ const AddPost = () => {
     };
   }
 
+  console.log(categories)
+
   return (
     <div>
       <Form
         form={form}
         name="nest-messages"
-        onFinish={addProduct}
+        onFinish={AddBlog}
         validateMessages={validateMessages}
         style={formStyle}
       >
         <Form.Item
-          style={{width: 350}}
-          name="namePost"
+          style={{ width: 350 }}
+          name="title"
           label="Title"
           rules={[
             {
@@ -118,12 +111,12 @@ const AddPost = () => {
             },
           ]}
         >
-          <Input/>
+          <Input />
         </Form.Item>
 
         <Form.Item
-          name="categoryId"
-          label="Category"
+          name="category"
+          label="category"
           rules={[
             {
               required: true,
@@ -132,13 +125,11 @@ const AddPost = () => {
         >
           <Select
             defaultValue="Select Category"
-            style={{width: 200}}
+            style={{ width: 200 }}
             onChange={handleChange}
           >
-            {categories?.map((category) => (
-              <Option key={category.id} value={category.id}>
-                {category.name}
-              </Option>
+            {categories?.data?.cats.map((category) => (
+              <Option key={category._id} value={category.name}>{category.description}</Option>
             ))}
           </Select>
         </Form.Item>
@@ -152,32 +143,20 @@ const AddPost = () => {
               extraPlugins: [uploadPlugin],
             }}
             data=""
-            onReady={(editor) => {
-              // You can store the "editor" and use when it is needed.
-              // console.log("Editor is ready to use!", editor);
-            }}
             onChange={(event, editor) => {
               const data = editor.getData();
-              console.log({data});
-              setPost(data);
+              console.log({ data });
+              setDesc({ data });
             }}
-            // onBlur={(event, editor) => {
-            //   console.log("Blur.", editor);
-            // }}
-            // onFocus={(event, editor) => {
-            //   console.log("Focus.", editor);
-            // }}
           />
-          {/* <TextEditor /> */}
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
-            Add Product
+            Add Post
           </Button>
         </Form.Item>
       </Form>
-
-      <Toaster/>
+      <Toaster />
     </div>
   );
 };
