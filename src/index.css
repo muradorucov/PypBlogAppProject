@@ -144,3 +144,18 @@ a {
 .ant-input, .ant-select-selector, .ant-input-number-input {
     width: 300px !important;
 }
+
+.ant-layout-content {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+
+.ant-layout-content > div {
+    width: 100%
+}
+
+.ant-table-tbody > tr > td, .ant-table-container table > thead > tr:first-child th:last-child,
+.ant-table-container table > thead > tr:first-child th:first-child, .ant-table-cell, .ant-table-thead > tr > th {
+    text-align: center;
+}
