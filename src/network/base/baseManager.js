@@ -18,12 +18,13 @@ export const baseManager = {
 
     return responseData;
   },
+
   add: async (url, payload) => {
     let response = null;
     await axiosInstance
       .post(url, payload)
       .then((res) => {
-        if (res.status === 201) {
+        if (res.status === 200) {
           response = res.data;
         } else {
           throw new Error("Error Has Occurred while posting...");
@@ -34,6 +35,7 @@ export const baseManager = {
       });
     return response;
   },
+
   delete: async (url, id) => {
     let response = null;
     await axiosInstance
@@ -53,6 +55,7 @@ export const baseManager = {
 
     return response;
   },
+
   update: async (url, product) => {
     let response = null;
     await axiosInstance
@@ -71,9 +74,10 @@ export const baseManager = {
       });
     return response;
   },
+
   post: async (url, data) => {
     let response = null;
-    await contactAxiosInstance
+    await axiosInstance
       .post(url, data)
       .then((res) => {
         if (res.status === 200) {

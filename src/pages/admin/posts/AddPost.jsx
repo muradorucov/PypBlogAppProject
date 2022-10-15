@@ -36,8 +36,7 @@ const AddPost = () => {
   }
 
   const validateMessages = {
-    // eslint-disable-next-line no-template-curly-in-string
-    required: "${label} is required!",
+    required: `${label} is required!`
   };
 
   const formStyle = {
