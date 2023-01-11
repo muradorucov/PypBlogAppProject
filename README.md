@@ -1,6 +1,6 @@
 # Blog App Repo
 
-- [Site Live](https://blog-app-pyp.netlify.app/)
+- [Site Live](https://pyp-blogapp.netlify.app/)
 
 ### Short information about the project :
 
